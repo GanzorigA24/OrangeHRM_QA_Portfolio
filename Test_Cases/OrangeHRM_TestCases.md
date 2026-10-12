@@ -32,11 +32,11 @@
 
 - **Expected Result:** The user logs in successfully and reaches the appropriate dashboard.
 
-- **Actual Result:** Not executed yet.
+- **Actual Result:** The user logged in successfully and the OrangeHRM Dashboard appeared.
 
-- **Status:** Not Executed
+- **Status:** PASS
 
-- **Evidence:** To be captured during execution.
+- **Evidence:** Test_Evidence/TC-001_Login_Success.png
 
 ### TC-002: Login with an Invalid Username
 
@@ -60,11 +60,11 @@
 
 - **Expected Result:** Login is rejected, and an appropriate error message is displayed.
 
-- **Actual Result:** Not executed yet.
+- **Actual Result:** The application rejected the login attempt and displayed the error message "Invalid credentials."
 
-- **Status:** Not Executed
+- **Status:** PASS
 
-- **Evidence:** To be captured during execution.
+- **Evidence:** Test_Evidence/TC-002_Invalid_Username.png
 
 ### TC-003: Login with an Invalid Password
 
@@ -88,11 +88,11 @@
 
 - **Expected Result:** Login is rejected, and an appropriate error message is displayed.
 
-- **Actual Result:** Not executed yet.
+- **Actual Result:** The application rejected the login attempt and displayed the error message "Invalid credentials."
 
-- **Status:** Not Executed
+- **Status:** PASS
 
-- **Evidence:** To be captured during execution.
+- **Evidence:** Test_Evidence/TC-003_Invalid_Password.png
 
 ### TC-004: Submit Login with Both Fields Empty
 
@@ -114,11 +114,11 @@
 
 - **Expected Result:** Login is not successful, and required-field validation is displayed.
 
-- **Actual Result:** Not executed yet.
+- **Actual Result:** The application displayed "Required" under both the username and password fields when Login was clicked with both fields empty.
 
-- **Status:** Not Executed
+- **Status:** PASS
 
-- **Evidence:** To be captured during execution.
+- **Evidence:** Test_Evidence/TC-004_Empty_Login_Fields.png
 
 ### TC-005: Submit Login with Username Empty
 
@@ -142,11 +142,11 @@
 
 - **Expected Result:** Login is not successful, and username validation is displayed.
 
-- **Actual Result:** Not executed yet.
+- **Actual Result:** The username field was left empty while a password was entered. The application displayed "Required" under the username field and prevented login.
 
-- **Status:** Not Executed
+- **Status:** PASS
 
-- **Evidence:** To be captured during execution.
+- **Evidence:** Test_Evidence/TC-005_Empty_Username.png
 
 ### TC-006: Submit Login with Password Empty
 
@@ -170,11 +170,11 @@
 
 - **Expected Result:** Login is not successful, and password validation is displayed.
 
-- **Actual Result:** Not executed yet.
+- **Actual Result:** The username field contained "Admin" while the password field was left empty. The application displayed "Required" under the password field and prevented login.
 
-- **Status:** Not Executed
+- **Status:** PASS
 
-- **Evidence:** To be captured during execution.
+- **Evidence:** Test_Evidence/TC-006_Empty_Password.png
 
 ### TC-007: Log Out Successfully
 
@@ -194,11 +194,11 @@
 
 - **Expected Result:** The user is logged out and returned to the login page.
 
-- **Actual Result:** Not executed yet.
+- **Actual Result:** After clicking Logout, the application returned to the login page.
 
-- **Status:** Not Executed
+- **Status:** PASS
 
-- **Evidence:** To be captured during execution.
+- **Evidence:** Test_Evidence/TC-007_Logout_Success.png
 
 ### TC-008: Access a Protected Page After Logout
 
@@ -224,11 +224,11 @@
 
 - **Expected Result:** The user is redirected to the login page or prevented from viewing protected content.
 
-- **Actual Result:** Not executed yet.
+- **Actual Result:** After logging out, opening the previously accessed protected URL displayed the OrangeHRM login page instead of the protected content.
 
-- **Status:** Not Executed
+- **Status:** PASS
 
-- **Evidence:** To be captured during execution.
+- **Evidence:** Test_Evidence/TC-008_Protected_Page_After_Logout.png
 
 ## 2. Admin User Management
 
@@ -250,11 +250,11 @@
 
 - **Expected Result:** The Admin user management page opens successfully and displays the available user management controls.
 
-- **Actual Result:** Not executed yet.
+- **Actual Result:** The Admin User Management page opened successfully. The search filters, Add button, user table, and 15 records were displayed.
 
-- **Status:** Not Executed
+- **Status:** PASS
 
-- **Evidence:** To be captured during execution.
+- **Evidence:** Test_Evidence/TC-009_Admin_User_Management_Page.png
 
 ### TC-010: Review the User List
 
@@ -278,11 +278,11 @@
 
 - **Expected Result:** The user list and its available controls are displayed without unexpected layout or loading problems.
 
-- **Actual Result:** Not executed yet.
+- **Actual Result:** The user list displayed user records with Username, User Role, Employee Name, Status, and Actions columns. The visible rows were consistently aligned, with no obvious layout problems.
 
-- **Status:** Not Executed
+- **Status:** PASS
 
-- **Evidence:** To be captured during execution.
+- **Evidence:** Test_Evidence/TC-010_User_List.png
 
 ### TC-011: Open or Review a User Record
 
@@ -308,11 +308,11 @@
 
 - **Expected Result:** The selected user's information is displayed correctly when the application supports opening the record. No unintended changes are made.
 
-- **Actual Result:** Not executed yet.
+- **Actual Result:** The selected user record opened successfully. The Edit User form displayed the User Role, Employee Name, Status, and Username fields. No changes were made or saved.
 
-- **Status:** Not Executed
+- **Status:** PASS
 
-- **Evidence:** To be captured during execution.
+- **Evidence:** Test_Evidence/TC-011_User_Record_Review.png
 
 ### TC-012: Review Available Actions for a User Record
 
@@ -336,11 +336,11 @@
 
 - **Expected Result:** The available actions can be identified without modifying or deleting the record.
 
-- **Actual Result:** Not executed yet.
+- **Actual Result:** The user list displayed Edit and Delete actions for each user record. The available actions were identified without modifying or deleting any records.
 
-- **Status:** Not Executed
+- **Status:** PASS
 
-- **Evidence:** To be captured during execution.
+- **Evidence:** Test_Evidence/TC-012_User_Record_Actions.png
 
 ### TC-013: Review Pagination in the User List
 
@@ -366,11 +366,11 @@
 
 - **Expected Result:** When multiple pages are available, the application navigates between pages and displays the corresponding records. If the current data does not provide multiple pages, record the case as Blocked or Not Applicable according to the project's reporting rules, and explain why it could not be fully tested.
 
-- **Actual Result:** Not executed yet.
+- **Actual Result:** No pagination controls were visible at the bottom of the user list. Navigation between multiple pages could not be tested.
 
-- **Status:** Not Executed
+- **Status:** Blocked
 
-- **Evidence:** To be captured during execution.
+- **Evidence:** Test_Evidence/TC-013_User_List_Pagination.png
 
 ### TC-014: Clear Applied User-List Filters
 
@@ -396,11 +396,11 @@
 
 - **Expected Result:** The filter fields are cleared, and the results return to the expected unfiltered state when the application supports this behavior.
 
-- **Actual Result:** Not executed yet.
+- **Actual Result:** Entering Admin in the Username filter returned one matching user. After clicking Reset, the Username field was cleared and the list returned to displaying 26 records.
 
-- **Status:** Not Executed
+- **Status:** PASS
 
-- **Evidence:** To be captured during execution.
+- **Evidence:** Test_Evidence/TC-014_Clear_User_List_Filters.png
 
 ## 3. Search and Filtering
 
@@ -426,11 +426,11 @@
 
 - **Expected Result:** The results display the matching user record.
 
-- **Actual Result:** Not executed yet.
+- **Actual Result:** Searching for the exact username Admin returned one matching user record. The displayed username was Admin, with the Admin role and Enabled status.
 
-- **Status:** Not Executed
+- **Status:** PASS
 
-- **Evidence:** To be captured during execution.
+- **Evidence:** Test_Evidence/TC-015_Exact_Username_Search.png
 
 ### TC-016: Search Using a Partial Username
 
@@ -454,11 +454,11 @@
 
 - **Expected Result:** Record the actual behavior. If matching records are returned, verify that they match the entered text. If no records are returned, note that partial matching may not be supported; do not report a defect unless expected behavior is established.
 
-- **Actual Result:** Not executed yet.
+- **Actual Result:** Searching with the complete username priya.sharma.2024 returned the matching user. Searching with the partial username priya returned “No Records Found.” Partial username matching does not appear to be supported.
 
-- **Status:** Not Executed
+- **Status:** PASS — observed behavior documented; expected partial-match behavior is not established.
 
-- **Evidence:** To be captured during execution.
+- **Evidence:** Test_Evidence/TC-016_Partial_Username_Search.png
 
 ### TC-017: Search Using a Nonexistent Username
 
@@ -482,11 +482,11 @@
 
 - **Expected Result:** No matching user is returned, and the application handles the empty result correctly.
 
-- **Actual Result:** Not executed yet.
+- **Actual Result:** Searching for qa_user_not_found_987 displayed “No Records Found.” No unrelated user was returned.
 
-- **Status:** Not Executed
+- **Status:** PASS
 
-- **Evidence:** To be captured during execution.
+- **Evidence:** Test_Evidence/TC-017_Nonexistent_Username_Search.png
 
 ### TC-018: Search with Username and Optional Filters Left Blank
 
@@ -512,11 +512,11 @@
 
 - **Expected Result:** The application displays the expected default user-list results without an unexpected error.
 
-- **Actual Result:** Not executed yet.
+- **Actual Result:** With all search fields left blank, clicking Search displayed 29 user records without an error.
 
-- **Status:** Not Executed
+- **Status:** PASS
 
-- **Evidence:** To be captured during execution.
+- **Evidence:** Test_Evidence/TC-018_Blank_Search_Filters.png
 
 ### TC-019: Filter Users by the Admin Role
 
@@ -540,11 +540,11 @@
 
 - **Expected Result:** All returned records match the Admin role filter.
 
-- **Actual Result:** Not executed yet.
+- **Actual Result:** Selecting Admin from the User Role filter and clicking Search returned 8 records. All displayed records had the Admin role.
 
-- **Status:** Not Executed
+- **Status:** PASS
 
-- **Evidence:** To be captured during execution.
+- **Evidence:** Test_Evidence/TC-019_Admin_Role_Filter.png
 
 ### TC-020: Filter Users by the ESS Role
 
@@ -568,11 +568,11 @@
 
 - **Expected Result:** All returned records match the ESS role filter.
 
-- **Actual Result:** Not executed yet.
+- **Actual Result:** Selecting ESS from the User Role filter and clicking Search returned 21 records. All displayed records had the ESS role.
 
-- **Status:** Not Executed
+- **Status:** PASS
 
-- **Evidence:** To be captured during execution.
+- **Evidence:** Test_Evidence/TC-020_ESS_Role_Filter.png
 
 ### TC-021: Filter Users by Enabled Status
 
@@ -596,11 +596,11 @@
 
 - **Expected Result:** All returned records have Enabled status.
 
-- **Actual Result:** Not executed yet.
+- **Actual Result:** Selecting Enabled from the Status filter and clicking Search returned 28 records. All displayed records had Enabled status.
 
-- **Status:** Not Executed
+- **Status:** PASS
 
-- **Evidence:** To be captured during execution.
+- **Evidence:** Test_Evidence/TC-021_Enabled_Status_Filter.png
 
 ### TC-022: Filter Users by Disabled Status
 
@@ -624,11 +624,11 @@
 
 - **Expected Result:** All returned records have Disabled status. If no disabled accounts exist, record that limitation and do not assume the filter is defective.
 
-- **Actual Result:** Not executed yet.
+- **Actual Result:** Selecting Disabled from the Status filter and clicking Search returned 1 record. The returned record, sofia.hernandez.2024, had Disabled status.
 
-- **Status:** Not Executed
+- **Status:** PASS
 
-- **Evidence:** To be captured during execution.
+- **Evidence:** Test_Evidence/TC-022_Disabled_Status_Filter.png
 
 ### TC-023: Combine Username and Role Filters
 
@@ -654,11 +654,11 @@
 
 - **Expected Result:** Returned records satisfy both the username and role criteria.
 
-- **Actual Result:** Not executed yet.
+- **Actual Result:** The search returned one record matching username sofia.hernandez.2024 with status Disabled.
 
-- **Status:** Not Executed
+- **Status:** PASS
 
-- **Evidence:** To be captured during execution.
+- **Evidence:** Test_Evidence/TC-023_Username_Status_Filter.png
 
 ### TC-024: Combine Role and Status Filters
 
@@ -684,11 +684,11 @@
 
 - **Expected Result:** All returned records match both the selected role and status.
 
-- **Actual Result:** Not executed yet.
+- **Actual Result:** The search returned 7 records. The displayed users have the Admin role and Enabled status.
 
-- **Status:** Not Executed
+- **Status:** PASS
 
-- **Evidence:** To be captured during execution.
+- **Evidence:** Test_Evidence/TC-024_Admin_Enabled_Filter.png 
 
 ### TC-025: Clear Previous Filters and Perform a New Search
 
@@ -716,11 +716,11 @@
 
 - **Expected Result:** The new results match the new search criteria and are not incorrectly restricted by the previous filters.
 
-- **Actual Result:** Not executed yet.
+- **Actual Result:** After resetting the Admin filter and selecting ESS, the search returned 22 records with the ESS role.
 
-- **Status:** Not Executed
+- **Status:** PASS
 
-- **Evidence:** To be captured during execution.
+- **Evidence:** Test_Evidence/TC-025_Reset_And_New_Search.png
 
 ## 4. Employee Management
 
@@ -742,11 +742,11 @@
 
 - **Expected Result:** The employee list page opens successfully and displays the available search controls and employee records.
 
-- **Actual Result:** Not executed yet.
+- **Actual Result:** The Employee List page opened successfully. Search controls for Employee Name, Employee ID, Employment Status, Supervisor Name, Job Title, and Sub Unit were displayed. The page showed 151 employee records.
 
-- **Status:** Not Executed
+- **Status:** PASS
 
-- **Evidence:** To be captured during execution.
+- **Evidence:** Test_Evidence/TC-026_Employee_List.png
 
 ### TC-027: Search for an Existing Employee
 
@@ -770,11 +770,11 @@
 
 - **Expected Result:** The matching employee record is displayed.
 
-- **Actual Result:** Not executed yet.
+- **Actual Result:** Searching for Ana returned one matching employee.
 
-- **Status:** Not Executed
+- **Status:** PASS
 
-- **Evidence:** To be captured during execution.
+- **Evidence:** Test_Evidence/TC-027_Search_Existing_Employee.png
 
 ### TC-028: Search for a Nonexistent Employee
 
@@ -798,11 +798,11 @@
 
 - **Expected Result:** No matching employee is returned, and the application handles the empty result correctly.
 
-- **Actual Result:** Not executed yet.
+- **Actual Result:** Searching for the nonexistent employee name employeenotfound987 returned “No Records Found.” No employee records were displayed.
 
-- **Status:** Not Executed
+- **Status:** PASS
 
-- **Evidence:** To be captured during execution.
+- **Evidence:** Test_Evidence/TC-028_Search_Nonexistent_Employee.png
 
 ### TC-029: Open an Employee Record
 
@@ -828,11 +828,11 @@
 
 - **Expected Result:** The selected employee's details are displayed correctly, and no unintended changes are made.
 
-- **Actual Result:** Not executed yet.
+- **Actual Result:** The selected employee record opened successfully. Ashley West’s Personal Details page displayed employee information, including Employee ID 0411. No changes were made.
 
-- **Status:** Not Executed
+- **Status:** PASS
 
-- **Evidence:** To be captured during execution.
+- **Evidence:** Test_Evidence/TC-029_Open_Employee_Record.png
 
 ### TC-030: Use Available Employee Search Filters
 
@@ -858,11 +858,11 @@
 
 - **Expected Result:** The returned records match the selected filter criteria. If a filter is unavailable, record the limitation.
 
-- **Actual Result:** Not executed yet.
+- **Actual Result:** Tested the available employee search filters. The filters returned results matching the selected criteria, with no issues observed.
 
-- **Status:** Not Executed
+- **Status:** PASS
 
-- **Evidence:** To be captured during execution.
+- **Evidence:** Test_Evidence/TC-030_Employee_Search_Filter.png
 
 ### TC-031: Review Required Fields in an Employee Form
 
@@ -888,11 +888,11 @@
 
 - **Expected Result:** Required fields can be identified and documented without modifying employee records. If the form is inaccessible, record the limitation.
 
-- **Actual Result:** Not executed yet.
+- **Actual Result:** The Add Employee form displayed Employee Full Name with an asterisk indicating it is required. Employee Id had no required-field indicator. The form was reviewed without saving any changes.
 
-- **Status:** Not Executed
+- **Status:** PASS
 
-- **Evidence:** To be captured during execution.
+- **Evidence:** Test_Evidence/TC-031_Required_Fields.png
 
 ### TC-032: Submit an Employee Form with Required Information Missing
 
@@ -920,11 +920,11 @@
 
 - **Expected Result:** The form prevents submission or clearly identifies the missing required information. No unintended employee record is created or modified.
 
-- **Actual Result:** Not executed yet.
+- **Actual Result:** Clicking Save with First Name and Last Name empty displayed “Required” validation messages for both fields. The form also displayed “Employee Id already exists” for ID 0469. No employee was created.
 
-- **Status:** Not Executed
+- **Status:** PASS
 
-- **Evidence:** To be captured during execution.
+- **Evidence:** Test_Evidence/TC-032_Required_Field_Validation.png
 
 ## 5. Roles and Permissions
 
