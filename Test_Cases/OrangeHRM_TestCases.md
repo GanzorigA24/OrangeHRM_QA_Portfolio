@@ -36,7 +36,7 @@
 
 - **Status:** PASS
 
-- **Evidence:** Test_Evidence/TC-001_Login_Success.png
+- **Evidence:** Test_Evidence/TS-001_LoginAuthentication/TC-001_Login_Success.png
 
 ### TC-002: Login with an Invalid Username
 
@@ -64,7 +64,7 @@
 
 - **Status:** PASS
 
-- **Evidence:** Test_Evidence/TC-002_Invalid_Username.png
+- **Evidence:** Test_Evidence/TS-001_LoginAuthentication/TC-002_Invalid_Username.png
 
 ### TC-003: Login with an Invalid Password
 
@@ -92,7 +92,7 @@
 
 - **Status:** PASS
 
-- **Evidence:** Test_Evidence/TC-003_Invalid_Password.png
+- **Evidence:** Test_Evidence/TS-001_LoginAuthentication/TC-003_Invalid_Password.png
 
 ### TC-004: Submit Login with Both Fields Empty
 
@@ -118,7 +118,7 @@
 
 - **Status:** PASS
 
-- **Evidence:** Test_Evidence/TC-004_Empty_Login_Fields.png
+- **Evidence:** Test_Evidence/TS-001_LoginAuthentication/TC-004_Empty_Login_Fields.png
 
 ### TC-005: Submit Login with Username Empty
 
@@ -146,7 +146,7 @@
 
 - **Status:** PASS
 
-- **Evidence:** Test_Evidence/TC-005_Empty_Username.png
+- **Evidence:** Test_Evidence/TS-001_LoginAuthentication/TC-005_Empty_Username.png
 
 ### TC-006: Submit Login with Password Empty
 
@@ -174,7 +174,7 @@
 
 - **Status:** PASS
 
-- **Evidence:** Test_Evidence/TC-006_Empty_Password.png
+- **Evidence:** Test_Evidence/TS-001_LoginAuthentication/TC-006_Empty_Password.png
 
 ### TC-007: Log Out Successfully
 
@@ -198,7 +198,7 @@
 
 - **Status:** PASS
 
-- **Evidence:** Test_Evidence/TC-007_Logout_Success.png
+- **Evidence:** Test_Evidence/TS-001_LoginAuthentication/TC-007_Logout_Success.png
 
 ### TC-008: Access a Protected Page After Logout
 
@@ -228,7 +228,7 @@
 
 - **Status:** PASS
 
-- **Evidence:** Test_Evidence/TC-008_Protected_Page_After_Logout.png
+- **Evidence:** Test_Evidence/TS-001_LoginAuthentication/TC-008_Protected_Page_After_Logout.png
 
 ## 2. Admin User Management
 
@@ -254,7 +254,7 @@
 
 - **Status:** PASS
 
-- **Evidence:** Test_Evidence/TC-009_Admin_User_Management_Page.png
+- **Evidence:** Test_Evidence/TS-002_Admin/TC-009_Admin_User_Management_Page.png
 
 ### TC-010: Review the User List
 
@@ -282,7 +282,7 @@
 
 - **Status:** PASS
 
-- **Evidence:** Test_Evidence/TC-010_User_List.png
+- **Evidence:** Test_Evidence/TS-002_Admin/TC-010_User_List.png
 
 ### TC-011: Open or Review a User Record
 
@@ -312,7 +312,7 @@
 
 - **Status:** PASS
 
-- **Evidence:** Test_Evidence/TC-011_User_Record_Review.png
+- **Evidence:** Test_Evidence/TS-002_Admin/TC-011_User_Record_Review.png
 
 ### TC-012: Review Available Actions for a User Record
 
@@ -340,7 +340,7 @@
 
 - **Status:** PASS
 
-- **Evidence:** Test_Evidence/TC-012_User_Record_Actions.png
+- **Evidence:** Test_Evidence/TS-002_Admin/TC-012_User_Record_Actions.png
 
 ### TC-013: Review Pagination in the User List
 
@@ -370,7 +370,7 @@
 
 - **Status:** Blocked
 
-- **Evidence:** Test_Evidence/TC-013_User_List_Pagination.png
+- **Evidence:** Test_Evidence/TS-002_Admin/TC-013_User_List_Pagination.png
 
 ### TC-014: Clear Applied User-List Filters
 
@@ -400,7 +400,7 @@
 
 - **Status:** PASS
 
-- **Evidence:** Test_Evidence/TC-014_Clear_User_List_Filters.png
+- **Evidence:** Test_Evidence/TS-002_Admin/TC-014_Clear_User_List_Filters.png
 
 ## 3. Search and Filtering
 
@@ -430,7 +430,7 @@
 
 - **Status:** PASS
 
-- **Evidence:** Test_Evidence/TC-015_Exact_Username_Search.png
+- **Evidence:** Test_Evidence/TS-003_SearchFilter/TC-015_Exact_Username_Search.png
 
 ### TC-016: Search Using a Partial Username
 
@@ -458,7 +458,7 @@
 
 - **Status:** PASS — observed behavior documented; expected partial-match behavior is not established.
 
-- **Evidence:** Test_Evidence/TC-016_Partial_Username_Search.png
+- **Evidence:** Test_Evidence/TS-003_SearchFilter/TC-016_Partial_Username_Search.png
 
 ### TC-017: Search Using a Nonexistent Username
 
@@ -486,7 +486,7 @@
 
 - **Status:** PASS
 
-- **Evidence:** Test_Evidence/TC-017_Nonexistent_Username_Search.png
+- **Evidence:** Test_Evidence/TS-003_SearchFilter/TC-017_Nonexistent_Username_Search.png
 
 ### TC-018: Search with Username and Optional Filters Left Blank
 
@@ -516,7 +516,7 @@
 
 - **Status:** PASS
 
-- **Evidence:** Test_Evidence/TC-018_Blank_Search_Filters.png
+- **Evidence:** Test_Evidence/TS-003_SearchFilter/TC-018_Blank_Search_Filters.png
 
 ### TC-019: Filter Users by the Admin Role
 
@@ -544,7 +544,7 @@
 
 - **Status:** PASS
 
-- **Evidence:** Test_Evidence/TC-019_Admin_Role_Filter.png
+- **Evidence:** Test_Evidence/TS-003_SearchFilter/TC-019_Admin_Role_Filter.png
 
 ### TC-020: Filter Users by the ESS Role
 
@@ -572,7 +572,7 @@
 
 - **Status:** PASS
 
-- **Evidence:** Test_Evidence/TC-020_ESS_Role_Filter.png
+- **Evidence:** Test_Evidence/TS-003_SearchFilter/TC-020_ESS_Role_Filter.png
 
 ### TC-021: Filter Users by Enabled Status
 
@@ -600,7 +600,7 @@
 
 - **Status:** PASS
 
-- **Evidence:** Test_Evidence/TC-021_Enabled_Status_Filter.png
+- **Evidence:** Test_Evidence/TS-003_SearchFilter/TC-021_Enabled_Status_Filter.png
 
 ### TC-022: Filter Users by Disabled Status
 
@@ -628,7 +628,7 @@
 
 - **Status:** PASS
 
-- **Evidence:** Test_Evidence/TC-022_Disabled_Status_Filter.png
+- **Evidence:** Test_Evidence/TS-003_SearchFilter/TC-022_Disabled_Status_Filter.png
 
 ### TC-023: Combine Username and Role Filters
 
@@ -658,7 +658,7 @@
 
 - **Status:** PASS
 
-- **Evidence:** Test_Evidence/TC-023_Username_Status_Filter.png
+- **Evidence:** Test_Evidence/TS-003_SearchFilter/TC-023_Username_Status_Filter.png
 
 ### TC-024: Combine Role and Status Filters
 
@@ -688,7 +688,7 @@
 
 - **Status:** PASS
 
-- **Evidence:** Test_Evidence/TC-024_Admin_Enabled_Filter.png 
+- **Evidence:** Test_Evidence/TS-003_SearchFilter/TC-024_Admin_Enabled_Filter.png 
 
 ### TC-025: Clear Previous Filters and Perform a New Search
 
@@ -720,7 +720,7 @@
 
 - **Status:** PASS
 
-- **Evidence:** Test_Evidence/TC-025_Reset_And_New_Search.png
+- **Evidence:** Test_Evidence/TS-003_SearchFilter/TC-025_Reset_And_New_Search.png
 
 ## 4. Employee Management
 
@@ -746,7 +746,7 @@
 
 - **Status:** PASS
 
-- **Evidence:** Test_Evidence/TC-026_Employee_List.png
+- **Evidence:** Test_Evidence/TS-004_EmployeeManagement/TC-026_Employee_List.png
 
 ### TC-027: Search for an Existing Employee
 
@@ -774,7 +774,7 @@
 
 - **Status:** PASS
 
-- **Evidence:** Test_Evidence/TC-027_Search_Existing_Employee.png
+- **Evidence:** Test_Evidence/TS-004_EmployeeManagement/TC-027_Search_Existing_Employee.png
 
 ### TC-028: Search for a Nonexistent Employee
 
@@ -802,7 +802,7 @@
 
 - **Status:** PASS
 
-- **Evidence:** Test_Evidence/TC-028_Search_Nonexistent_Employee.png
+- **Evidence:** Test_Evidence/TS-004_EmployeeManagement/TC-028_Search_Nonexistent_Employee.png
 
 ### TC-029: Open an Employee Record
 
@@ -832,7 +832,7 @@
 
 - **Status:** PASS
 
-- **Evidence:** Test_Evidence/TC-029_Open_Employee_Record.png
+- **Evidence:** Test_Evidence/TS-004_EmployeeManagement/TC-029_Open_Employee_Record.png
 
 ### TC-030: Use Available Employee Search Filters
 
@@ -862,7 +862,7 @@
 
 - **Status:** PASS
 
-- **Evidence:** Test_Evidence/TC-030_Employee_Search_Filter.png
+- **Evidence:** Test_Evidence/TS-004_EmployeeManagement/TC-030_Employee_Search_Filter.png
 
 ### TC-031: Review Required Fields in an Employee Form
 
@@ -892,7 +892,7 @@
 
 - **Status:** PASS
 
-- **Evidence:** Test_Evidence/TC-031_Required_Fields.png
+- **Evidence:** Test_Evidence/TS-004_EmployeeManagement/TC-031_Required_Fields.png
 
 ### TC-032: Submit an Employee Form with Required Information Missing
 
@@ -924,7 +924,7 @@
 
 - **Status:** PASS
 
-- **Evidence:** Test_Evidence/TC-032_Required_Field_Validation.png
+- **Evidence:** Test_Evidence/TS-004_EmployeeManagement/TC-032_Required_Field_Validation.png
 
 ## 5. Roles and Permissions
 
