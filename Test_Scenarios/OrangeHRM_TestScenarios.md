@@ -61,10 +61,102 @@
 
 | Scenario ID | Test Scenario | Purpose |
 |---|---|---|
-| TS-033 | Review Admin role information | Verify that the Admin role is displayed correctly in user management. |
-| TS-034 | Review ESS role information | Verify that the ESS role is displayed correctly in user management. |
-| TS-035 | Compare features available to different authorized roles | Identify differences in navigation or available actions when suitable accounts are available. |
-| TS-036 | Attempt to access a restricted function | Verify that unauthorized access is prevented when a suitable account and safe test condition are available. |
+| TS-033 | Review available user roles and their descriptions | Understand the available roles and their intended permissions, if this information is accessible. |
+| TS-034 | Compare available functions for different user roles | Identify differences in access and functionality between Admin and ESS accounts, if suitable accounts are available. |
+| TS-035 | Verify access to administrator-only functions | Verify that restricted functions are accessible only to authorized users. |
+| TS-036 | Verify access to restricted pages or functions | Check whether a user without the required permissions is prevented from accessing restricted content, when safe to test. |
+
+## 6. Directory
+
+| Scenario ID | Test Scenario | Purpose |
+|---|---|---|
+| TS-037 | Open the Directory page | Verify that the Directory page loads and displays employee information. |
+| TS-038 | Search for an employee by name | Verify that searching by employee name returns matching results. |
+| TS-039 | Filter directory results by job title or location | Verify that available filters narrow the directory results correctly. |
+
+## 7. Dashboard
+
+| Scenario ID | Test Scenario | Purpose |
+|---|---|---|
+| TS-040 | Open the Dashboard page | Verify that the Dashboard loads successfully for an authorized user. |
+| TS-041 | Review available Dashboard widgets | Verify that the available widgets display information or content correctly. |
+| TS-042 | Review Quick Launch options | Identify the available shortcuts and verify that they lead to the expected pages, where accessible. |
+| TS-043 | Review employee-related Dashboard information | Verify that employee-related widgets display information when data is available. |
+
+## 8. Leave
+
+| Scenario ID | Test Scenario | Purpose |
+|---|---|---|
+| TS-044 | Review the available Leave pages | Verify that accessible Leave pages, such as Apply, My Leave, and Leave List, load correctly. |
+| TS-045 | Review the leave application form | Identify the available fields and required information when applying for leave. |
+| TS-046 | Review leave application form validation | Observe how the system handles missing or invalid information without submitting an unintended request. |
+| TS-047 | Review leave records and entitlements | Verify that available leave records and entitlement information are displayed correctly. |
+| TS-048 | Review Leave reports and filters | Identify available report options and filters and verify their basic behavior where accessible. |
+
+## 9. Time
+
+| Scenario ID | Test Scenario | Purpose |
+|---|---|---|
+| TS-049 | Review the Timesheets page | Verify that the Timesheets page loads and displays available options. |
+| TS-050 | Review the Attendance page | Verify that attendance records and available actions are displayed correctly. |
+| TS-051 | Review available time records and filters | Identify available search criteria and verify that they filter records correctly, where accessible. |
+| TS-052 | Review Time reports | Verify that available report options can be accessed and reviewed. |
+| TS-053 | Review Project Info pages | Verify that available project information pages load and display their records correctly. |
+
+## 10. Recruitment
+
+| Scenario ID | Test Scenario | Purpose |
+|---|---|---|
+| TS-054 | Open the Candidates page | Verify that the Candidates page loads and displays available candidate records. |
+| TS-055 | Search for a candidate | Verify that candidate search returns matching results when records are available. |
+| TS-056 | Open the Vacancies page | Verify that the Vacancies page loads and displays available vacancy records. |
+| TS-057 | Review candidate details | Verify that candidate details can be opened and viewed without making changes. |
+| TS-058 | Review available candidate filters | Verify that available filters can narrow candidate records correctly, where accessible. |
+
+## 11. My Info
+
+| Scenario ID | Test Scenario | Purpose |
+|---|---|---|
+| TS-059 | Open the My Info page | Verify that the My Info page loads and displays the employee's personal information. |
+| TS-060 | Review Personal Details and Contact Details | Verify that personal and contact information fields are displayed correctly. |
+| TS-061 | Review Emergency Contacts and Dependents | Verify that the available emergency contact and dependent information can be viewed. |
+| TS-062 | Review Job and Salary information | Verify that the available employment and salary information can be viewed by an authorized user. |
+| TS-063 | Review Qualifications and Memberships | Verify that the available qualification and membership information is displayed correctly. |
+
+## 12. Performance
+
+| Scenario ID | Test Scenario | Purpose |
+|---|---|---|
+| TS-064 | Open the Manage Reviews page | Verify that the Manage Reviews page loads and displays available review records or options. |
+| TS-065 | Review available performance review filters | Verify that available search and filter options can narrow review records, where accessible. |
+| TS-066 | Review My Trackers and Employee Trackers | Verify that the tracker pages load and display available information. |
+| TS-067 | Review Performance configuration options | Identify available configuration options without changing any settings. |
+
+## 13. Maintenance
+
+| Scenario ID | Test Scenario | Purpose |
+|---|---|---|
+| TS-068 | Verify access to the Maintenance page | Verify that the Maintenance page enforces administrator authorization and prevents unauthorized access to restricted functions. |
+
+## 14. Claim
+
+| Scenario ID | Test Scenario | Purpose |
+|---|---|---|
+| TS-069 | Review the Submit Claim page | Verify that the Submit Claim page loads and displays the available form fields. |
+| TS-070 | Review claim form validation | Observe how the form handles missing required information without submitting an unintended claim. |
+| TS-071 | Open the My Claims page | Verify that the page loads and displays available claim records for the current user. |
+| TS-072 | Review the Employee Claims and Assign Claim pages | Verify that these pages load and display available options for an authorized user. |
+| TS-073 | Review Claim configuration options | Identify available configuration settings without making changes. |
+
+## 15. Buzz
+
+| Scenario ID | Test Scenario | Purpose |
+|---|---|---|
+| TS-074 | Open the Buzz page | Verify that the Buzz page loads and displays the available feed. |
+| TS-075 | Review Buzz feed sorting options | Verify that available sorting options, such as most recent or most liked, organize posts correctly. |
+| TS-076 | Review the post creation interface | Verify that the post creation interface is available and displays the expected input options without publishing a post. |
+| TS-077 | Review post interactions | Verify that available like and comment options are displayed and accessible, where safe to test. |
+| TS-078 | Review photo and video sharing options | Verify that the interface provides available options for attaching or sharing media without publishing content. |
 
 ## Notes
 
