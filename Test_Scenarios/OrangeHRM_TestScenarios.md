@@ -136,14 +136,3 @@
 | TS-054 | Open the Buzz feed and review sorting options | Verify that the feed loads and that available sorting options organize posts as expected. |
 | TS-055 | Review the post creation and media attachment interface | Verify that text and media options are available without publishing content. |
 | TS-056 | Review available post interactions | Verify that like, comment, and sharing controls are available, where safe to test, without disrupting other users' content. |
-
-## Notes and Execution Guidelines
-
-- These are high-level test scenarios, not detailed test cases or execution results.
-- Confirm that each scenario is supported by the hosted demo and the signed-in account before creating detailed test cases.
-- Record observed behavior rather than assuming undocumented behavior. For example, treat partial-search behavior as an observation unless requirements define the expected matching rule.
-- Do not modify or delete shared demo records, submit claims or leave requests, publish social posts, or change configuration unless the action is safe and permitted.
-- Mark scenarios that cannot be verified with available access as **Blocked** or **Not Executed**, as appropriate. Do not automatically report them as defects.
-- Each detailed test case should reference its scenario ID and include preconditions, test data, steps, expected result, actual result, status, and evidence when applicable.
-- Report a defect only when unexpected behavior is reproducible and supported by clear evidence.
-- Save relevant screenshots, logs, and other evidence in the portfolio evidence folders. Avoid capturing unnecessary personal or sensitive information.
