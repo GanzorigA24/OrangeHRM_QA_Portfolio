@@ -18,9 +18,9 @@
   2. Enter a valid username and password.
   3. Click **Login**.
 - **Expected Result:** The user logs in successfully and reaches the Dashboard.
-- **Actual Result:** Not executed yet.
-- **Status:** Not Executed
-- **Evidence:** `Test_Evidence/TS-001_LoginAuthentication/`
+- **Actual Result:** The user logged in successfully and the OrangeHRM Dashboard appeared.
+- **Status:** PASS
+- **Evidence:** `Test_Evidence/TS-001_LoginAuthentication/TC-001_Login_Success.png`
 
 ### TC-002: Log In with Invalid Credentials
 - **Related Scenario:** TS-002
@@ -33,9 +33,9 @@
   3. Click **Login**.
   4. Observe the response.
 - **Expected Result:** Login is rejected, and an appropriate error message appears.
-- **Actual Result:** Not executed yet.
-- **Status:** Not Executed
-- **Evidence:** `Test_Evidence/TS-001_LoginAuthentication/`
+- **Actual Result:** The application rejected the login attempt and displayed the error message "Invalid credentials."
+- **Status:** PASS
+- **Evidence:** `Test_Evidence/TS-001_LoginAuthentication/TC-002_Invalid_Username.png`
 
 ### TC-003: Submit Login with Required Fields Empty
 - **Related Scenario:** TS-003
