@@ -48,70 +48,71 @@
   3. Click **Login**.
   4. Observe the validation messages.
 - **Expected Result:** Required-field messages appear, and login is prevented.
-- **Actual Result:** Not executed yet.
-- **Status:** Not Executed
-- **Evidence:** `Test_Evidence/TS-001_LoginAuthentication/`
+- **Actual Result:** Both the Username and Password fields displayed red "Required" validation messages. Login was prevented.
+- **Status:** PASS
+- **Evidence:** `Test_Evidence/TS-001_LoginAuthentication/TC-003_Empty_Login_Fields.png`
 
 ### TC-004: Log Out Successfully
+
 - **Related Scenario:** TS-004
 - **Objective:** Verify that a logged-in user can end the session.
-- **Preconditions:** The user is logged in successfully.
-- **Test Data:** Valid test account.
+- **Preconditions:** The user is logged in to OrangeHRM.
+- **Test Data:** Valid login credentials.
 - **Steps:**
-  1. Open the user menu.
-  2. Click **Logout**.
-  3. Observe the page displayed.
-- **Expected Result:** The session ends, and the login page appears.
-- **Actual Result:** Not executed yet.
-- **Status:** Not Executed
-- **Evidence:** `Test_Evidence/TS-001_LoginAuthentication/`
+  1. Log in with valid credentials.
+  2. Open the user menu in the top-right corner.
+  3. Click **Logout**.
+  4. Observe the page displayed.
+- **Expected Result:** The user is logged out, and the login page appears.
+- **Actual Result:** After clicking Logout, the application returned to the login page.
+- **Status:** PASS
+- **Evidence:** `Test_Evidence/TS-001_LoginAuthentication/TC-004_Logout_Success.png`
 
 ### TC-005: Access a Protected Page After Logout
+
 - **Related Scenario:** TS-005
-- **Objective:** Verify that protected content cannot be accessed after logout.
-- **Preconditions:** The user can log in and access a protected page.
-- **Test Data:** URL of a protected page.
+- **Objective:** Verify that a logged-out user cannot access a protected page.
+- **Preconditions:** The user has logged out of OrangeHRM.
+- **Test Data:** Dashboard URL.
 - **Steps:**
-  1. Log in successfully.
-  2. Open a protected page and copy its URL.
-  3. Log out.
-  4. Paste the copied URL into the browser address bar.
-  5. Press Enter.
-- **Expected Result:** The application redirects to the login page or denies access to protected content.
-- **Actual Result:** Not executed yet.
-- **Status:** Not Executed
-- **Evidence:** `Test_Evidence/TS-001_LoginAuthentication/`
+  1. Log in and copy the Dashboard URL.
+  2. Log out.
+  3. Paste the Dashboard URL into the browser address bar.
+  4. Press Enter and observe the result.
+- **Expected Result:** OrangeHRM redirects the user to the login page or prevents access to the Dashboard.
+- **Actual Result:** After logout, accessing the Dashboard URL returned the user to the OrangeHRM login page.
+- **Status:** PASS
+- **Evidence:** `Test_Evidence/TS-001_LoginAuthentication/TC-005_Protected_Page_After_Logout.png`
 
 ## 2. Admin User Management
 
 ### TC-006: Open Admin User Management
 - **Related Scenario:** TS-006
-- **Objective:** Verify that an authorized user can open Admin User Management.
-- **Preconditions:** The user is logged in with Admin permissions.
-- **Test Data:** Authorized Admin account.
+- **Objective:** Verify that the Admin module opens successfully for an authorized user.
+- **Preconditions:** The user is logged in to OrangeHRM.
+- **Test Data:** Valid login credentials.
 - **Steps:**
-  1. Click **Admin** in the navigation menu.
-  2. Wait for the page to load.
-  3. Review the page.
-- **Expected Result:** The user-management page loads and displays available controls.
-- **Actual Result:** Not executed yet.
-- **Status:** Not Executed
-- **Evidence:** `Test_Evidence/TS-002_Admin/`
+  1. Log in to OrangeHRM.
+  2. Click **Admin** in the left navigation menu.
+  3. Wait for the page to load.
+- **Expected Result:** The Admin page opens and displays the user management interface.
+- **Actual Result:** The Admin page opened successfully and displayed the System Users search filters, user records, and management actions.
+- **Status:** PASS
+- **Evidence:** `Test_Evidence/TS-002_Admin/TC-006_Admin_Page.png`
 
 ### TC-007: Review the User Table and Available Controls
 - **Related Scenario:** TS-007
-- **Objective:** Verify that the user table, columns, filters, and available actions are displayed.
-- **Preconditions:** The Admin User Management page is open.
-- **Test Data:** Existing user records.
+- **Objective:** Verify that the Admin module displays the system users list.
+- **Preconditions:** The user is logged in and has opened the Admin module.
+- **Test Data:** Existing system user records.
 - **Steps:**
-  1. Review the user table.
-  2. Check the displayed column headings.
-  3. Review the search and filter controls.
-  4. Identify the available actions.
-- **Expected Result:** The table and available controls are displayed without obvious layout or loading problems.
-- **Actual Result:** Not executed yet.
-- **Status:** Not Executed
-- **Evidence:** `Test_Evidence/TS-002_Admin/`
+  1. Open the Admin module.
+  2. Locate the System Users table.
+  3. Review the displayed columns and user records.
+- **Expected Result:** The system users table displays user records with usernames, user roles, employee names, statuses, and available actions.
+- **Actual Result:** The System Users table displayed user records with usernames, roles, employee names, statuses, and available Edit and Delete actions.
+- **Status:** PASS
+- **Evidence:** `Test_Evidence/TS-002_Admin/TC-007_User_List.png`
 
 ### TC-008: Open a User Record for Review
 - **Related Scenario:** TS-008
@@ -125,149 +126,148 @@
   4. Review the displayed information.
   5. Exit without saving changes.
 - **Expected Result:** The record information is displayed, and no changes are saved.
-- **Actual Result:** Not executed yet.
-- **Status:** Not Executed
-- **Evidence:** `Test_Evidence/TS-002_Admin/`
+- **Actual Result:** The Edit User page displayed the selected user's role, employee name, status, and username.
+- **Status:** PASS
+- **Evidence:** `Test_Evidence/TS-002_Admin/TC-008_Individual_User_Record.png`
 
 ### TC-009: Review User Actions and List Navigation
 - **Related Scenario:** TS-009
-- **Objective:** Identify available user-record actions and pagination controls without modifying shared records.
-- **Preconditions:** Admin User Management is open.
-- **Test Data:** Existing user records.
+- **Objective:** Verify that the system users list displays Edit and Delete actions.
+- **Preconditions:** The user is logged in and has opened Admin → User Management.
+- **Test Data:** Existing system user records.
 - **Steps:**
-  1. Review the actions available for a user record.
-  2. Identify whether Edit and Delete controls are present.
-  3. Review the list navigation and pagination controls.
-  4. If multiple pages are available, navigate between them.
-  5. Do not save changes or delete records.
-- **Expected Result:** Available actions and navigation behavior are documented. If multiple pages are unavailable, record that limitation.
-- **Actual Result:** Not executed yet.
-- **Status:** Not Executed
-- **Evidence:** `Test_Evidence/TS-002_Admin/`
+  1. Open the Admin module.
+  2. Review the System Users table.
+  3. Check the Actions column for existing users.
+  4. Confirm that Edit and Delete icons are displayed.
+- **Expected Result:** Edit and Delete actions are visible for applicable user records.
+- **Actual Result:** The Actions column displayed Edit and Delete icons for multiple system user records.
+- **Status:** PASS
+- **Evidence:** `Test_Evidence/TS-002_Admin/TC-009_Available_User_Actions.png`
 
 ### TC-010: Clear User-Management Filters
 - **Related Scenario:** TS-010
-- **Objective:** Verify that clearing search filters restores the unfiltered user list.
-- **Preconditions:** Admin User Management is open.
-- **Test Data:** A filter value that matches an existing user.
+- **Objective:** Verify that the Reset button clears the user search filters.
+- **Preconditions:** The user is logged in and has opened Admin → User Management.
+- **Test Data:** Username, User Role, and Status filter values.
 - **Steps:**
-  1. Enter a value in an available search field.
-  2. Click **Search**.
-  3. Click **Reset** or the available clear control.
-  4. Review the search fields and results.
-- **Expected Result:** The filter fields are cleared, and the user list returns to its default state.
-- **Actual Result:** Not executed yet.
-- **Status:** Not Executed
-- **Evidence:** `Test_Evidence/TS-002_Admin/`
+  1. Enter a username in the Username filter.
+  2. Select a User Role and Status, if available.
+  3. Click **Reset**.
+  4. Check the filter fields.
+- **Expected Result:** The search fields are cleared or returned to their default selections.
+- **Actual Result:** The search fields were empty, and the User Role and Status dropdowns returned to `-- Select --`. The System Users list was displayed again.
+- **Status:** PASS
+- **Evidence:** `Test_Evidence/TS-002_Admin/TC-010_Reset_User_Filters.png`
 
 ## 3. User Search and Filtering
 
 ### TC-011: Search for a User by Exact Username
 - **Related Scenario:** TS-011
-- **Objective:** Verify that an exact username search returns the matching user.
-- **Preconditions:** The user is logged in with Admin permissions.
-- **Test Data:** An existing username.
+- **Objective:** Verify that searching by an exact username returns the matching user.
+- **Preconditions:** The user is logged in and has opened Admin → User Management.
+- **Test Data:** Username: `Admin`
 - **Steps:**
-  1. Open Admin User Management.
-  2. Enter the exact username.
-  3. Click **Search**.
-  4. Review the results.
-- **Expected Result:** The matching user is displayed, and the username matches the search value.
-- **Actual Result:** Not executed yet.
-- **Status:** Not Executed
-- **Evidence:** `Test_Evidence/TS-003_SearchFilter/`
+  1. Enter `Admin` in the Username field.
+  2. Click **Search**.
+  3. Review the returned records.
+- **Expected Result:** The results match the entered username according to the application's search behavior.
+- **Actual Result:** The search returned one record with the username `Admin`.
+- **Status:** PASS
+- **Evidence:** `Test_Evidence/TS-003_Admin/TC-011_Search_Exact_Username.png`
 
 ### TC-012: Search Using a Partial Username
 - **Related Scenario:** TS-012
-- **Objective:** Observe whether partial username searches return matching records.
-- **Preconditions:** The user is logged in with Admin permissions, and a suitable username exists.
-- **Test Data:** Part of an existing username.
+- **Objective:** Check how the application handles a partial username search.
+- **Preconditions:** The user is logged in and has opened Admin → User Management.
+- **Test Data:** Partial username: `priya`
 - **Steps:**
-  1. Open Admin User Management.
-  2. Enter part of an existing username.
+  1. Open Admin → User Management.
+  2. Enter `priya` in the Username field.
   3. Click **Search**.
-  4. Record the returned results.
-- **Expected Result:** The application's actual matching behavior is documented. Do not report a defect unless the expected behavior is established.
-- **Actual Result:** Not executed yet.
-- **Status:** Not Executed
-- **Evidence:** `Test_Evidence/TS-003_SearchFilter/`
+  4. Observe the returned records.
+- **Expected Result:** Record whether the application returns matching usernames or no results for the partial search term.
+- **Actual Result:** The application displayed "No Records Found" for the search term `priya`.
+- **Status:** PASS 
+- **Evidence:** `Test_Evidence/TS-003_Admin/TC-012_Search_Partial_Username.png`
 
 ### TC-013: Search for a Nonexistent Username
 - **Related Scenario:** TS-013
-- **Objective:** Verify that a nonexistent username does not return unrelated users.
-- **Preconditions:** The user is logged in with Admin permissions.
-- **Test Data:** A username that does not exist, such as `qa_user_not_found_987`.
+- **Objective:** Verify that searching for a nonexistent username returns no matching records.
+- **Preconditions:** The user is logged in and has opened Admin → User Management.
+- **Test Data:** `qa_user_not_found_987`
 - **Steps:**
-  1. Open Admin User Management.
-  2. Enter the nonexistent username.
+  1. Open Admin → User Management.
+  2. Enter `qa_user_not_found_987` in the Username field.
   3. Click **Search**.
-  4. Review the results.
-- **Expected Result:** No matching user is returned, and the application displays an appropriate empty-results state.
-- **Actual Result:** Not executed yet.
-- **Status:** Not Executed
-- **Evidence:** `Test_Evidence/TS-003_SearchFilter/`
+  4. Observe the results.
+- **Expected Result:** The application displays no matching records.
+- **Actual Result:** The application displayed "No Records Found" for the entered username.
+- **Status:** PASS
+- **Evidence:** `Test_Evidence/TS-003_Admin/TC-013_Search_Nonexistent_Username.png`
 
 ### TC-014: Search with No Filters Applied
 - **Related Scenario:** TS-014
-- **Objective:** Verify the default results when all optional search filters are empty.
-- **Preconditions:** The user is logged in with Admin permissions.
-- **Test Data:** All search fields left blank.
+- **Objective:** Verify the results when a search is performed without entering any filters.
+- **Preconditions:** The user is logged in and has opened Admin → User Management.
+- **Test Data:** All search filters left empty or at their default selections.
 - **Steps:**
-  1. Open Admin User Management.
-  2. Clear all search fields.
+  1. Click **Reset** to clear all filters.
+  2. Leave every filter empty or at its default selection.
   3. Click **Search**.
-  4. Review the displayed records.
-- **Expected Result:** The application displays its default user-list results without an unexpected error.
-- **Actual Result:** Not executed yet.
-- **Status:** Not Executed
-- **Evidence:** `Test_Evidence/TS-003_SearchFilter/`
+  4. Observe the results.
+- **Expected Result:** The application displays available system user records without applying any filters.
+- **Actual Result:** The application displayed 29 records with all search filters empty.
+- **Status:** PASS
+- **Evidence:** `Test_Evidence/TS-002_Admin/TC-014_Search_Empty_Filters.png`
 
 ### TC-015: Filter Users by Role
 - **Related Scenario:** TS-015
-- **Objective:** Verify that filtering by a role returns users assigned that role.
-- **Preconditions:** The user is logged in with Admin permissions.
-- **Test Data:** Admin or ESS role.
+- **Objective:** Verify that filtering by the Admin role displays only users assigned to that role.
+- **Preconditions:** The user is logged in and can access Admin > User Management.
+- **Test Data:** User Role = Admin.
 - **Steps:**
-  1. Open Admin User Management.
-  2. Select a role from the **User Role** filter.
+  1. Open Admin > User Management.
+  2. Select **Admin** in the User Role filter.
   3. Click **Search**.
-  4. Review the role of each returned record.
-- **Expected Result:** Every returned record matches the selected role.
-- **Actual Result:** Not executed yet.
-- **Status:** Not Executed
-- **Evidence:** `Test_Evidence/TS-003_SearchFilter/`
+  4. Check the User Role column for all displayed records.
+- **Expected Result:** Only users with the Admin role are displayed.
+- **Actual Result:** The search returned 8 records. The displayed records had the Admin role.
+- **Status:** PASS 
+- **Evidence:** `Test_Evidence/TS-003_SearchFilter/TC-015_Admin_Role_Filter.png`
 
 ### TC-016: Filter Users by Status
 - **Related Scenario:** TS-016
-- **Objective:** Verify that Enabled and Disabled status filters return matching accounts.
-- **Preconditions:** The user is logged in with Admin permissions.
-- **Test Data:** Enabled status and Disabled status.
+- **Objective:** Verify that filtering by account status displays only users with the selected status.
+- **Preconditions:** The user is logged in and can access Admin > User Management.
+- **Test Data:** Status = Enabled and Disabled.
 - **Steps:**
-  1. Open Admin User Management.
-  2. Select **Enabled** and click **Search**.
-  3. Check the status of the returned records.
-  4. Select **Disabled** and click **Search**.
-  5. Check the status of the returned records.
-- **Expected Result:** Each search returns only records matching the selected status. If no records exist for a status, document that limitation.
-- **Actual Result:** Not executed yet.
-- **Status:** Not Executed
-- **Evidence:** `Test_Evidence/TS-003_SearchFilter/`
+  1. Open Admin > User Management.
+  2. Select Enabled in the Status filter and click Search.
+  3. Verify that all displayed users have Enabled status.
+  4. Select Disabled in the Status filter and click Search.
+  5. Verify that all displayed users have Disabled status.
+- **Expected Result:** Only users matching the selected account status are displayed.
+- **Actual Result:** The Enabled filter returned 28 records, all displaying Enabled status. The Disabled filter returned 1 record, displaying Disabled status.
+- **Status:** PASS
+- **Evidence:** `Test_Evidence/TS-003_SearchFilter/TC-016_Account_Status_Filter.png`
 
 ### TC-017: Combine Multiple User Filters
 - **Related Scenario:** TS-017
-- **Objective:** Verify that multiple user filters work together.
-- **Preconditions:** The user is logged in with Admin permissions, and suitable user records are available.
-- **Test Data:** A role and status combination, such as Admin and Enabled.
+- **Objective:** Verify that multiple search filters work together correctly.
+- **Preconditions:** The user is logged in and can access Admin > User Management.
+- **Test Data:** Different combinations of Username, User Role, and Status.
 - **Steps:**
-  1. Open Admin User Management.
-  2. Select a role.
-  3. Select a status.
-  4. Click **Search**.
-  5. Review all returned records.
-- **Expected Result:** Every returned record matches both selected criteria.
-- **Actual Result:** Not executed yet.
-- **Status:** Not Executed
-- **Evidence:** `Test_Evidence/TS-003_SearchFilter/`
+  1. Open Admin > User Management.
+  2. Enter search criteria using the Username, User Role, and Status filters.
+  3. Click Search.
+  4. Review the results.
+  5. Repeat with different filter combinations.
+  6. Verify that the displayed records match the selected criteria.
+- **Expected Result:** The application returns only records that match the selected filter criteria.
+- **Actual Result:** Multiple filter combinations were tested and reviewed. The displayed results matched the selected criteria.
+- **Status:** PASS
+- **Evidence:** `Test_Evidence/TS-003_SearchFilter/TC-017_Multiple_Filter_Criteria.png`
 
 ## 4. Employee Management (PIM)
 
