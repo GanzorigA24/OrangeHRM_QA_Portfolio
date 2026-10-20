@@ -47,8 +47,7 @@
 | TS-020 | Search for a nonexistent employee | Verify that the application handles empty employee-search results correctly. |
 | TS-021 | Use available employee filters | Verify that supported filters narrow the employee list to matching records. |
 | TS-022 | Open an employee record | Verify that the selected employee's details are displayed. |
-| TS-023 | Review required fields in the Add Employee form | Identify required fields and visible validation indicators. |
-| TS-024 | Submit the Add Employee form with required information missing | Verify that validation prevents an incomplete employee record from being created. |
+| TS-023 | Submit the Add Employee form with required information missing | Verify that validation prevents an incomplete employee record from being created. |
 
 ## 5. Roles and Permissions
 

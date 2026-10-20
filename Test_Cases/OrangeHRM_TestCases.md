@@ -252,22 +252,19 @@
 - **Status:** PASS
 - **Evidence:** `Test_Evidence/TS-003_SearchFilter/TC-016_Account_Status_Filter.png`
 
-### TC-017: Combine Multiple User Filters
-- **Related Scenario:** TS-017
-- **Objective:** Verify that multiple search filters work together correctly.
-- **Preconditions:** The user is logged in and can access Admin > User Management.
-- **Test Data:** Different combinations of Username, User Role, and Status.
+### TC-018: Open the Employee List
+- **Related Scenario:** TS-018
+- **Objective:** Verify that an authorized user can open the Employee List.
+- **Preconditions:** The user is logged in with permission to access PIM.
+- **Test Data:** Authorized test account.
 - **Steps:**
-  1. Open Admin > User Management.
-  2. Enter search criteria using the Username, User Role, and Status filters.
-  3. Click Search.
-  4. Review the results.
-  5. Repeat with different filter combinations.
-  6. Verify that the displayed records match the selected criteria.
-- **Expected Result:** The application returns only records that match the selected filter criteria.
-- **Actual Result:** Multiple filter combinations were tested and reviewed. The displayed results matched the selected criteria.
-- **Status:** PASS
-- **Evidence:** `Test_Evidence/TS-003_SearchFilter/TC-017_Multiple_Filter_Criteria.png`
+  1. Click **PIM** in the navigation menu.
+  2. Wait for the Employee List page to load.
+  3. Review the search controls and employee table.
+- **Expected Result:** The Employee List loads and displays available controls and records.
+- **Actual Result:** Not executed yet.
+- **Status:** Not Executed
+- **Evidence:** `Test_Evidence/TS-003_SearchFilter/TC-018_Employee_List.png`
 
 ## 4. Employee Management (PIM)
 
@@ -281,104 +278,90 @@
   2. Wait for the Employee List page to load.
   3. Review the search controls and employee table.
 - **Expected Result:** The Employee List loads and displays available controls and records.
-- **Actual Result:** Not executed yet.
-- **Status:** Not Executed
-- **Evidence:** `Test_Evidence/TS-004_EmployeeManagement/`
+- **Actual Result:** The Employee List loaded successfully. Search controls and the employee table were visible, with 151 records found.
+- **Status:** PASS
+- **Evidence:** `Test_Evidence/TS-004_EmployeeManagement/TC-018_Employee_List.png`
 
 ### TC-019: Search for an Existing Employee
 - **Related Scenario:** TS-019
 - **Objective:** Verify that searching for an existing employee returns the correct record.
-- **Preconditions:** The Employee List is accessible, and a known employee exists.
-- **Test Data:** An existing employee name or ID.
+- **Preconditions:** The user is logged in and the Employee List is accessible.
+- **Test Data:** Employee Name: `Ana`.
 - **Steps:**
-  1. Open the Employee List.
-  2. Enter the employee name or ID in the appropriate field.
+  1. Open PIM → Employee List.
+  2. Enter `Ana` in the Employee Name field.
   3. Click **Search**.
-  4. Review the results.
+  4. Review the search results.
 - **Expected Result:** The matching employee is displayed, and the identifying information is correct.
-- **Actual Result:** Not executed yet.
-- **Status:** Not Executed
-- **Evidence:** `Test_Evidence/TS-004_EmployeeManagement/`
+- **Actual Result:** The search returned 1 record. The displayed employee name was Ana Sup, with employee ID 0442.
+- **Status:** PASS
+- **Evidence:** `Test_Evidence/TS-004_EmployeeManagement/TC-019_Search_Existing_Employee.png`
 
 ### TC-020: Search for a Nonexistent Employee
 - **Related Scenario:** TS-020
 - **Objective:** Verify that searching for a nonexistent employee returns no unrelated records.
-- **Preconditions:** The Employee List is accessible.
-- **Test Data:** A nonexistent employee name or ID, such as `QA_Employee_Not_Found_987`.
+- **Preconditions:** The user is logged in and the Employee List is accessible.
+- **Test Data:** Employee Name: `employeeNotFound987`.
 - **Steps:**
-  1. Open the Employee List.
-  2. Enter the nonexistent employee name or ID.
+  1. Open PIM → Employee List.
+  2. Enter `employeeNotFound987` in the Employee Name field.
   3. Click **Search**.
-  4. Review the results.
+  4. Review the search results.
 - **Expected Result:** No matching employee is returned, and the application handles the empty-results state correctly.
-- **Actual Result:** Not executed yet.
-- **Status:** Not Executed
-- **Evidence:** `Test_Evidence/TS-004_EmployeeManagement/`
+- **Actual Result:** The application displayed **No Records Found** and returned no employee records.
+- **Status:** PASS
+- **Evidence:** `Test_Evidence/TS-004_EmployeeManagement/TC-020_Search_Nonexistent_Employee.png`
 
 ## 4. Employee Management (PIM) — Continued
 
-### TC-021: Use Available Employee Filters
+### TC-021: Filter Employees
 - **Related Scenario:** TS-021
-- **Objective:** Verify that available employee filters narrow results correctly.
-- **Preconditions:** The Employee List is accessible.
-- **Test Data:** A supported filter value matching an existing employee.
+- **Objective:** Verify that filtering employees by employment status returns matching records.
+- **Preconditions:** The user is logged in and the Employee List is accessible.
+- **Test Data:** Employment Status: `Full-Time Contract`.
 - **Steps:**
-  1. Open the Employee List.
-  2. Select or enter a supported filter value.
-  3. Click **Search**.
-  4. Check the returned records against the selected criteria.
-- **Expected Result:** Returned employees match the selected filter. Document unavailable filters as limitations.
-- **Actual Result:** Not executed yet.
-- **Status:** Not Executed
-- **Evidence:** `Test_Evidence/TS-004_EmployeeManagement/`
+  1. Open PIM → Employee List.
+  2. Leave the other search fields empty.
+  3. Select `Full-Time Contract` in the Employment Status dropdown.
+  4. Click **Search**.
+  5. Review the search results.
+- **Expected Result:** Only employees matching the selected employment status are displayed.
+- **Actual Result:** The search returned 1 record. Employee Rebecca Harmony (ID 0042) was displayed with the status Full-Time Contract.
+- **Status:** PASS
+- **Evidence:** `Test_Evidence/TS-004_EmployeeManagement/TC-021_Employee_Filters.png`
 
 ### TC-022: Open an Employee Record
 - **Related Scenario:** TS-022
-- **Objective:** Verify that an employee record can be opened and reviewed.
-- **Preconditions:** The Employee List is accessible, and an existing employee is available.
-- **Test Data:** An existing employee record.
+- **Objective:** Verify that a user can open an employee record and view the employee's information.
+- **Preconditions:** The user is logged in and the Employee List is accessible.
+- **Test Data:** Employee Name: Ashley West; Employee ID: 0411.
 - **Steps:**
-  1. Open the Employee List.
-  2. Search for an existing employee.
-  3. Open the matching record.
-  4. Review the displayed details.
-  5. Exit without saving changes.
-- **Expected Result:** The selected employee's details are displayed, and no unintended changes are made.
-- **Actual Result:** Not executed yet.
-- **Status:** Not Executed
-- **Evidence:** `Test_Evidence/TS-004_EmployeeManagement/`
+  1. Open PIM → Employee List.
+  2. Find the employee Ashley West.
+  3. Click the **Edit** icon beside the employee's record.
+  4. Verify that the employee details page opens.
+  5. Review the displayed personal information.
+- **Expected Result:** The employee details page opens and displays the correct employee name, ID, and personal information.
+- **Actual Result:** The employee details page opened successfully. Ashley West and Employee ID 0411 were displayed in the Personal Details section.
+- **Status:** PASS
+- **Evidence:** `Test_Evidence/TS-004_EmployeeManagement/TC-022_Open_Employee_Record.png`
 
-### TC-023: Review Required Fields in the Add Employee Form
+### TC-023: Submit the Add Employee Form with Required Information Missing
 - **Related Scenario:** TS-023
-- **Objective:** Identify required fields and their visible indicators.
-- **Preconditions:** The user has permission to access the Add Employee form.
-- **Test Data:** Add Employee form.
+- **Objective:** Verify that missing required information prevents an incomplete employee record from being created.
+- **Preconditions:** The user is logged in and can access the Add Employee form.
+- **Test Data:** Leave the First Name and Last Name fields empty; Employee ID: `0469` (already exists).
 - **Steps:**
   1. Open PIM.
   2. Select **Add Employee**.
-  3. Review the visible fields and required-field indicators.
-  4. Record the fields marked as required.
-  5. Exit without saving.
-- **Expected Result:** Required fields are identified and documented without creating an employee record.
-- **Actual Result:** Not executed yet.
-- **Status:** Not Executed
-- **Evidence:** `Test_Evidence/TS-004_EmployeeManagement/`
-
-### TC-024: Submit the Add Employee Form with Required Information Missing
-- **Related Scenario:** TS-024
-- **Objective:** Verify that missing required information prevents an incomplete employee record from being created.
-- **Preconditions:** The Add Employee form is accessible, and testing can be performed safely.
-- **Test Data:** Leave a confirmed required field empty.
-- **Steps:**
-  1. Open the Add Employee form.
-  2. Leave a required field empty.
-  3. Click **Save** only if it is safe to test.
-  4. Review the validation messages.
-  5. Confirm that no unintended record was created.
-- **Expected Result:** The application identifies the missing information and prevents an incomplete record from being created.
-- **Actual Result:** Not executed yet.
-- **Status:** Not Executed
-- **Evidence:** `Test_Evidence/TS-004_EmployeeManagement/`
+  3. Leave the First Name and Last Name fields empty.
+  4. Click **Save**.
+  5. Review the validation messages.
+  6. Confirm that no employee record was created.
+- **Expected Result:** The application identifies missing required information and prevents an incomplete employee record from being created.
+- **Actual Result:** The application displayed required-field messages for First Name and Last Name. It also displayed a separate message indicating that Employee ID `0469` already exists.
+- **Status:** PASS
+- **Evidence:** `Test_Evidence/TS-004_EmployeeManagement/TC-023_Missing_Required_Information.png`
 
 ## 5. Roles and Permissions
 
