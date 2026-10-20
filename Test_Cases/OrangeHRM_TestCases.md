@@ -366,84 +366,93 @@
 ## 5. Roles and Permissions
 
 ### TC-025: Compare Access Available to Different User Roles
+
 - **Related Scenario:** TS-025
 - **Objective:** Identify differences in available pages and actions for Admin and ESS users.
-- **Preconditions:** Suitable authorized accounts for different roles are available.
-- **Test Data:** Admin and ESS test accounts.
+- **Preconditions:** The OrangeHRM demo application is accessible. Admin credentials are available, but separate ESS credentials are not provided.
+- **Test Data:** Admin account; ESS account unavailable.
 - **Steps:**
   1. Log in using the Admin account.
   2. Record the available navigation items and relevant actions.
-  3. Log out.
-  4. Log in using the ESS account.
-  5. Record its available navigation items and actions.
-  6. Compare the observations.
-- **Expected Result:** Differences in access are documented accurately according to the permissions of each account.
-- **Actual Result:** Not executed yet.
-- **Status:** Not Executed
-- **Evidence:** Save evidence in an appropriate role-and-permissions evidence folder.
+  3. Capture a screenshot of the Admin dashboard.
+  4. Log out.
+  5. Check the public demo login page for ESS credentials.
+  6. Record that no ESS credentials are provided and the comparison cannot be completed.
+- **Expected Result:** Differences in access between Admin and ESS users can be compared and documented.
+- **Actual Result:** The Admin dashboard loaded successfully and displayed navigation items including Admin, PIM, Leave, Time, Recruitment, My Info, Performance, Dashboard, Directory, Maintenance, Claim, and Buzz. The public demo login page provided only Admin credentials, so the ESS comparison could not be completed.
+- **Status:** Blocked
+- **Evidence:** `Test_Evidence/TS-005_RolesPermissions/TC-025_Admin_Access.png`
 
 ### TC-026: Verify Access to a Restricted Page or Function
+
 - **Related Scenario:** TS-026
 - **Objective:** Verify that a user without the required permission cannot access a restricted function.
-- **Preconditions:** A suitable restricted account and a safely testable restricted function are available.
+- **Preconditions:** The OrangeHRM demo is accessible. A restricted account is required, but only Admin credentials are available.
 - **Test Data:** Restricted account and target page or function.
 - **Steps:**
-  1. Identify a function the test account should not be allowed to use.
-  2. Log in using that account.
-  3. Attempt to access the function through normal navigation.
-  4. If safe and appropriate, try its direct URL.
-  5. Record the application's response.
-- **Expected Result:** Access is denied, restricted content is not exposed, or the user is redirected appropriately.
-- **Actual Result:** Not executed yet.
-- **Status:** Not Executed
-- **Evidence:** Save evidence in an appropriate role-and-permissions evidence folder.
+  1. Review the available demo credentials.
+  2. Confirm that only Admin credentials are provided.
+  3. Record that a restricted account is unavailable.
+- **Expected Result:** Users without the required permission cannot access restricted functions.
+- **Actual Result:** The test could not be performed because a restricted account was unavailable.
+- **Status:** Blocked
+- **Evidence:** No additional screenshot required; the credential limitation is documented in TC-025.
 
 ## 6. Directory
 
 ### TC-027: Open the Directory Page
+
 - **Related Scenario:** TS-027
 - **Objective:** Verify that the Directory page loads and displays employee entries.
 - **Preconditions:** The user is logged in with access to Directory.
 - **Test Data:** Available directory entries.
 - **Steps:**
-  1. Click **Directory** in the navigation menu.
+  1. Click Directory in the navigation menu.
   2. Wait for the page to load.
   3. Review the displayed entries and controls.
-- **Expected Result:** The page loads without obvious errors and displays entries or an appropriate empty state.
-- **Actual Result:** Not executed yet.
-- **Status:** Not Executed
-- **Evidence:** `Test_Evidence/TS-005_Directory/`
+- **Expected Result:** The page loads without obvious errors and displays employee entries or an appropriate empty state.
+- **Actual Result:** The Directory page loaded successfully. The search filters for Employee Name, Job Title, and Location were visible. One employee record, Peter Mac Anderson, was displayed with the job title Chief Financial Officer and location information.
+- **Status:** PASS
+- **Evidence:** `Test_Evidence/TS-005_Directory/TC-027_Directory_Page.png`
 
 ### TC-028: Search the Directory by Employee Name
+
 - **Related Scenario:** TS-028
-- **Objective:** Verify that a name search returns matching directory entries.
-- **Preconditions:** The Directory page is accessible, and a suitable employee entry exists.
-- **Test Data:** An existing employee name.
+- **Objective:** Verify that searching for an existing employee returns the matching directory entry.
+- **Preconditions:** The user is logged in, and the Directory page is accessible.
+- **Test Data:** Employee Name: `Peter Mac Anderson`
+
 - **Steps:**
-  1. Open Directory.
-  2. Enter an existing employee name in the search field.
-  3. Apply the search.
-  4. Review the results.
-- **Expected Result:** The returned entries match the entered name according to the application's search behavior.
-- **Actual Result:** Not executed yet.
-- **Status:** Not Executed
-- **Evidence:** `Test_Evidence/TS-005_Directory/`
+  1. Open the Directory page.
+  2. Enter `Peter Mac Anderson` in the Employee Name field.
+  3. Click Search.
+  4. Review the returned results.
+
+- **Expected Result:** The search returns the matching employee entry.
+- **Actual Result:** The search returned one matching record for Peter Mac Anderson. The record displayed his job title as Chief Financial Officer and location information.
+- **Status:** PASS
+- **Evidence:** `Test_Evidence/TS-005_Directory/TC-027_Search_Directory_Page.png` (Need to work on it later)
 
 ### TC-029: Filter Directory by Job Title or Location
 - **Related Scenario:** TS-029
 - **Objective:** Verify that available job-title and location filters narrow directory results.
-- **Preconditions:** The Directory page is accessible.
-- **Test Data:** An available job title or location.
+- **Preconditions:** The user is logged in, and the Directory page is accessible.
+- **Test Data:**
+  - Job Title: Chief Financial Officer
+  - Location: Texas R&D
 - **Steps:**
-  1. Open Directory.
-  2. Review the available job-title and location filters.
-  3. Select an available filter value.
-  4. Apply the filter.
-  5. Check the returned entries.
-- **Expected Result:** Returned entries match the selected filter. Record any filter that is unavailable.
-- **Actual Result:** Not executed yet.
-- **Status:** Not Executed
-- **Evidence:** `Test_Evidence/TS-005_Directory/`
+  1. Open the Directory page.
+  2. Select Chief Financial Officer from the Job Title filter.
+  3. Click Search and review the results.
+  4. Click Reset.
+  5. Select Texas R&D from the Location filter.
+  6. Click Search and review the results.
+- **Expected Result:** Returned employees match the selected job title or location.
+- **Actual Result:** Filtering by Chief Financial Officer returned one employee, Peter Mac Anderson. Filtering by Texas R&D returned four employees, all displaying Texas R&D as their location.
+- **Status:** PASS
+- **Evidence:**
+  - `Test_Evidence/TS-005_Directory/TC-029_Directory_JobTitle_Filter.png`
+  - `Test_Evidence/TS-005_Directory/TC-029_Directory_Location_Filter.png`
 
 ## 7. Dashboard
 
