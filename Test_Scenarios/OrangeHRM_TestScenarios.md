@@ -134,4 +134,3 @@
 |---|---|---|
 | TS-054 | Open the Buzz feed and review sorting options | Verify that the feed loads and that available sorting options organize posts as expected. |
 | TS-055 | Review the post creation and media attachment interface | Verify that text and media options are available without publishing content. |
-| TS-056 | Review available post interactions | Verify that like, comment, and sharing controls are available, where safe to test, without disrupting other users' content. |
