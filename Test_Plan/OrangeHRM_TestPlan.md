@@ -1,4 +1,5 @@
 # OrangeHRM Test Plan
+
 ## 1. Objective
 
 The objective of this test plan is to verify that the main OrangeHRM features work as expected. Testing focuses on checking functionality, identifying potential defects, executing test cases, and documenting results and evidence.
