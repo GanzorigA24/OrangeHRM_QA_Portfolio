@@ -2,18 +2,28 @@
 
 ## 1. Objective
 
-The objective of this test plan is to verify that the main OrangeHRM features work correctly and meet their expected requirements. Testing will focus on finding defects, verifying functionality, and documenting test results and evidence.
+The objective of this test plan is to verify that the main OrangeHRM features work as expected. Testing focuses on checking functionality, identifying potential defects, executing test cases, and documenting results and evidence.
 
 ## 2. Scope
 
 ### In Scope
 
 - Authentication and login
+- Admin user management
 - Employee management
 - User roles and permissions
 - User search and filtering
-- User status
-- Basic functional testing
+- Directory
+- Dashboard
+- Leave management
+- Time and attendance
+- Recruitment
+- Personal information
+- Performance
+- Maintenance
+- Claims
+- Buzz
+- Manual functional testing
 - Exploratory testing
 - Regression testing
 
@@ -26,12 +36,12 @@ The objective of this test plan is to verify that the main OrangeHRM features wo
 
 ## 3. Testing Types
 
-The following testing types will be used during the project:
+The following testing types are included in the project:
 
-- **Functional Testing:** Verify that features work according to their expected behavior.
-- **Exploratory Testing:** Explore the application to find unexpected problems that may not be covered by test cases.
+- **Functional Testing:** Verify that application features behave as expected.
+- **Exploratory Testing:** Explore the application to identify unexpected issues beyond the documented test cases.
 - **Regression Testing:** Re-test previously working features after changes or bug fixes.
-- **Automated Testing:** Automate selected regression tests using Playwright and TypeScript during Week 3.
+- **Automated Testing:** Automate selected regression test cases using Playwright and TypeScript in a future project phase.
 
 ## 4. Test Environment
 
@@ -41,52 +51,51 @@ The following testing types will be used during the project:
 - **Environment:** Hosted web application
 - **Operating System:** Windows
 - **Browser:** Google Chrome
-- **Testing Tools:** Playwright and TypeScript (planned)
+- **Testing Approach:** Manual functional testing
+- **Automation Tools:** Playwright and TypeScript (planned)
 - **Test Management:** GitHub
-- **Evidence:** Screenshots, videos, and test results
+- **Evidence:** Screenshots and documented test results
 
 ## 5. Test Data
 
-The following test data will be used during testing:
+The test data includes:
 
 - Valid OrangeHRM user credentials
 - Invalid usernames and passwords
 - Existing employee records
 - Admin users
 - ESS users
-- Enabled users
-- Disabled users
+- Enabled and disabled users
 - Valid and invalid search values
-- Test data created specifically for employee management scenarios
+- Input values for employee management scenarios
 
-Only test data permitted by the hosted demo will be used. Existing records will not be modified or deleted unless the test scenario requires it and the change is safe.
+Only test data permitted by the hosted demo will be used. Existing records will not be modified or deleted unless necessary and safe for the test.
 
 ## 6. Entry Criteria
 
 Testing can begin when:
 
 - The hosted OrangeHRM demo is accessible.
-- The tester can access the required application features.
-- Required test accounts are available.
+- The required application features are available.
+- Required test accounts and test data are available.
 - Test scenarios and test cases have been prepared.
-- Required test data is available.
 - The browser and testing environment are ready.
 
 ## 7. Exit Criteria
 
-Testing for the project phase can be considered complete when:
+The manual testing phase can be considered complete when:
 
-- All planned test cases have been executed.
-- Test results have been documented.
-- Failed test cases have been investigated.
-- Reproducible defects have been documented.
-- Required screenshots or videos have been collected.
-- Exploratory testing has been completed for the selected modules.
-- A test summary has been prepared.
+- Planned test cases have been executed or their execution limitations documented.
+- Actual results and test statuses have been recorded.
+- Failed or partially executed test cases have been reviewed.
+- Reproducible defects have been documented when identified.
+- Relevant screenshots and other evidence have been collected.
+- Test scenarios, test cases, and evidence references have been checked for consistency.
+- A test execution summary has been prepared.
 
 ## 8. Defect Reporting
 
-When a defect is discovered, it will be documented with:
+When a potential defect is discovered, it will be documented with:
 
 - Defect ID
 - Title
@@ -97,19 +106,44 @@ When a defect is discovered, it will be documented with:
 - Severity
 - Priority
 - Environment
-- Evidence such as screenshots or videos
+- Evidence, such as screenshots or videos
 - Defect status
 
-Each defect report will include clear reproduction steps and evidence when available. Severity and priority will be assigned based on the defect's impact and urgency.
+Defect reports should contain clear reproduction steps and supporting evidence when available. Severity and priority will be assigned based on the defect's impact and urgency.
+
+Only observed and reproducible defects will be reported as confirmed defects.
 
 ## 9. Test Evidence
 
-Test evidence will be collected during test execution when appropriate. Evidence may include:
+Test evidence is collected during test execution when appropriate. Evidence may include:
 
-- Screenshots of test results
-- Screenshots of defects
+- Screenshots of application behavior and test results
+- Screenshots supporting defect reports
 - Screen recordings when necessary
-- Test execution results
-- Bug reproduction evidence
+- Documented actual results and test statuses
 
-Evidence files will use a consistent naming convention and will be linked to the related test case or defect report.
+Evidence files are organized in the `Test_Evidence/` directory. Filenames should follow a consistent naming convention and correspond to the relevant test case or scenario.
+
+## 10. Test Documentation
+
+The project documentation is organized as follows:
+
+- **Test Plan:** `Test_Plan/OrangeHRM_TestPlan.md`
+- **Test Scenarios:** `Test_Scenarios/OrangeHRM_TestScenarios.md`
+- **Test Cases:** `Test_Cases/OrangeHRM_TestCases.md`
+- **Bug Report Template:** `Bug_Reports/Bug_Report_Template.md`
+- **Test Evidence:** `Test_Evidence/`
+- **Project Overview:** `README.md`
+
+These documents will be reviewed together to ensure that scenario IDs, test case IDs, execution results, and evidence references are consistent.
+
+## 11. Future Work
+
+The next project phase will focus on:
+
+- Reviewing and finalizing manual test documentation
+- Performing additional exploratory testing
+- Reporting verified defects, if found
+- Learning Playwright and TypeScript
+- Automating selected regression test cases
+- Exploring automated test reporting and GitHub Actions

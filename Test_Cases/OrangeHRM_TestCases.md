@@ -4,7 +4,7 @@
 **URL:** https://opensource-demo.orangehrmlive.com/  
 **Environment:** Windows, Google Chrome  
 **Testing Type:** Manual Functional Testing  
-**Test Status:** New execution cycle — tests not yet executed
+**Test Status:** Manual execution completed; individual test results are documented in the test cases below.
 
 ## 1. Login and Authentication
 

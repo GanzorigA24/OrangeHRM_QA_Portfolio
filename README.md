@@ -2,9 +2,9 @@
 
 ## Project Overview
 
-This project focuses on manual testing and test automation of the OrangeHRM Open Source Demo web application. It is part of my journey to develop practical software quality assurance (QA) skills.
+This project focuses on manual testing of the OrangeHRM Open Source Demo web application. It demonstrates my practical skills in software quality assurance (QA), including test planning, test case design, test execution, evidence collection, and test documentation.
 
-The project follows a QA workflow that includes test planning, test case design, test execution, bug reporting, and automated regression testing.
+The next phase will focus on automated regression testing using Playwright and TypeScript.
 
 **Application:** OrangeHRM Open Source Demo  
 **Website:** https://opensource-demo.orangehrmlive.com/  
@@ -13,13 +13,23 @@ The project follows a QA workflow that includes test planning, test case design,
 
 ## Testing Scope
 
-The project focuses on the following areas:
+The project covers the following application areas:
 
 - Login and authentication
 - Admin user management
-- Search and filtering
+- User search and filtering
 - Employee management
 - Roles and permissions
+- Directory
+- Dashboard
+- Leave management
+- Time and attendance
+- Recruitment
+- Personal information
+- Performance
+- Maintenance
+- Claims
+- Buzz
 
 ## Repository Structure
 
@@ -31,6 +41,9 @@ OrangeHRM_QA_Portfolio/
 ├── Test_Cases/
 │   └── OrangeHRM_TestCases.md
 ├── Test_Evidence/
+│   ├── TS-001_LoginAuthentication/
+│   ├── TS-002_Admin/
+│   └── ... additional test evidence folders
 ├── Test_Plan/
 │   └── OrangeHRM_TestPlan.md
 ├── Test_Scenarios/
@@ -42,25 +55,30 @@ OrangeHRM_QA_Portfolio/
 
 - [x] Created the GitHub repository structure
 - [x] Created the test plan
-- [x] Created test scenarios
-- [x] Created 36 detailed test cases
-- [ ] Execute test cases and record actual results
-- [ ] Perform exploratory testing
-- [ ] Capture and organize test evidence
-- [ ] Document verified defects
-- [ ] Develop Playwright automation tests
+- [x] Created 53 test scenarios
+- [x] Created 53 detailed test cases
+- [x] Executed manual test cases and recorded results
+- [x] Captured and organized test evidence
+- [ ] Complete the final consistency review of project documentation
+- [ ] Perform additional exploratory testing
+- [ ] Document verified defects, if any are found
+- [ ] Develop Playwright automation tests using TypeScript
 - [ ] Set up automated test reports and GitHub Actions
 
 ## Test Execution Status
 
-The test plan, scenarios, and 36 test cases have been created and committed. Systematic execution and result recording are still pending.
+Manual test execution has been performed, with results and evidence documented in the test case file.
 
-Test statuses will be updated based on actual results. Defects will be documented only when they are observed and reproducible.
+Test outcomes are based on observed application behavior. Any defects will be documented when they are observed and reproducible.
+
+The final execution summary will be updated after reviewing the recorded test results and confirming their consistency with the test evidence.
 
 ## Project Goals
 
-- Practice manual testing and exploratory testing
-- Learn to write clear test cases and bug reports
-- Understand expected results, actual results, and test outcomes
+- Practice manual and exploratory testing
+- Write clear test scenarios and detailed test cases
+- Record actual results and expected results accurately
+- Collect and organize test evidence
+- Document and report reproducible defects
 - Develop automated regression tests using Playwright and TypeScript
 - Build a practical QA portfolio for future job applications
