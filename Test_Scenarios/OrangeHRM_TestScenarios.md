@@ -7,7 +7,6 @@
 **Document Scope:** High-level scenarios for the hosted demo application
 
 ## 1. Login and Authentication
-
 | Scenario ID | Test Scenario | Purpose |
 |---|---|---|
 | TS-001 | Log in with valid credentials | Verify that a user with valid credentials can log in successfully. |
