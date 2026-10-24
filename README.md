@@ -9,7 +9,7 @@ The next phase will focus on automated regression testing using Playwright and T
 **Application:** OrangeHRM Open Source Demo  
 **Website:** https://opensource-demo.orangehrmlive.com/  
 **Testing Type:** Manual Functional Testing  
-**Automation Tools:** Playwright and TypeScript (planned)
+**Automation Tools:** Playwright and TypeScript 
 
 ## Testing Scope
 
