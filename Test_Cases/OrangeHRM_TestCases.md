@@ -53,7 +53,6 @@
 - **Evidence:** `Test_Evidence/TS-001_LoginAuthentication/TC-003_Empty_Login_Fields.png`
 
 ### TC-004: Log Out Successfully
-
 - **Related Scenario:** TS-004
 - **Objective:** Verify that a logged-in user can end the session.
 - **Preconditions:** The user is logged in to OrangeHRM.
@@ -69,7 +68,6 @@
 - **Evidence:** `Test_Evidence/TS-001_LoginAuthentication/TC-004_Logout_Success.png`
 
 ### TC-005: Access a Protected Page After Logout
-
 - **Related Scenario:** TS-005
 - **Objective:** Verify that a logged-out user cannot access a protected page.
 - **Preconditions:** The user has logged out of OrangeHRM.
@@ -130,7 +128,7 @@
 - **Status:** PASS
 - **Evidence:** `Test_Evidence/TS-002_Admin/TC-008_Individual_User_Record.png`
 
-### TC-009: Review User Actions and List Navigation
+### TC-009: Review User Actions
 - **Related Scenario:** TS-009
 - **Objective:** Verify that the system users list displays Edit and Delete actions.
 - **Preconditions:** The user is logged in and has opened Admin → User Management.
@@ -250,21 +248,27 @@
 - **Expected Result:** Only users matching the selected account status are displayed.
 - **Actual Result:** The Enabled filter returned 28 records, all displaying Enabled status. The Disabled filter returned 1 record, displaying Disabled status.
 - **Status:** PASS
-- **Evidence:** `Test_Evidence/TS-003_SearchFilter/TC-016_Account_Status_Filter.png`
+- **Evidence:** `Test_Evidence/TS-003_SearchFilter/TC-016_Account_Status_Filter.png` `Test_Evidence/TS-003_SearchFilter/TC-016_Account_Status_Filter2.png`
 
-### TC-018: Open the Employee List
-- **Related Scenario:** TS-018
-- **Objective:** Verify that an authorized user can open the Employee List.
-- **Preconditions:** The user is logged in with permission to access PIM.
-- **Test Data:** Authorized test account.
+### TC-017: Filter Users Using Multiple Criteria
+- **Related Scenario:** TS-017
+- **Objective:** Verify that multiple search filters work together correctly.
+- **Preconditions:** User is logged in and has opened Admin → User Management.
+- **Test Data:**
+  - Username: Empty
+  - User Role: Admin
+  - Status: Enabled
 - **Steps:**
-  1. Click **PIM** in the navigation menu.
-  2. Wait for the Employee List page to load.
-  3. Review the search controls and employee table.
-- **Expected Result:** The Employee List loads and displays available controls and records.
-- **Actual Result:** Not executed yet.
-- **Status:** Not Executed
-- **Evidence:** `Test_Evidence/TS-003_SearchFilter/TC-018_Employee_List.png`
+  1. Navigate to Admin → User Management.
+  2. Leave the Username field empty.
+  3. Select Admin in the User Role dropdown.
+  4. Select Enabled in the Status dropdown.
+  5. Click Search.
+  6. Verify the displayed records.
+- **Expected Result:** The system displays only users whose role is Admin and whose status is Enabled.
+- **Actual Result:** The system displayed 7 records. The visible records showed the Admin role and Enabled status.
+- **Status:** PASS 
+- **Evidence:** `Test_Evidence/TS-003_SearchFilter/TC-017_Multiple_Filter_Criteria.png` `Test_Evidence/TS-003_SearchFilter/TC-017_Multiple_Filter_Criteria2.png`
 
 ## 4. Employee Management (PIM)
 
@@ -365,9 +369,8 @@
 
 ## 5. Roles and Permissions
 
-### TC-025: Compare Access Available to Different User Roles
-
-- **Related Scenario:** TS-025
+### TC-024: Compare Access Available to Different User Roles
+- **Related Scenario:** TS-024
 - **Objective:** Identify differences in available pages and actions for Admin and ESS users.
 - **Preconditions:** The OrangeHRM demo application is accessible. Admin credentials are available, but separate ESS credentials are not provided.
 - **Test Data:** Admin account; ESS account unavailable.
@@ -381,11 +384,10 @@
 - **Expected Result:** Differences in access between Admin and ESS users can be compared and documented.
 - **Actual Result:** The Admin dashboard loaded successfully and displayed navigation items including Admin, PIM, Leave, Time, Recruitment, My Info, Performance, Dashboard, Directory, Maintenance, Claim, and Buzz. The public demo login page provided only Admin credentials, so the ESS comparison could not be completed.
 - **Status:** Blocked
-- **Evidence:** `Test_Evidence/TS-005_RolesPermissions/TC-025_Admin_Access.png`
+- **Evidence:** `Test_Evidence/TS-005_RolesPermissions/TC-024_Admin_Access.png`
 
-### TC-026: Verify Access to a Restricted Page or Function
-
-- **Related Scenario:** TS-026
+### TC-025: Verify Access to a Restricted Page or Function
+- **Related Scenario:** TS-025
 - **Objective:** Verify that a user without the required permission cannot access a restricted function.
 - **Preconditions:** The OrangeHRM demo is accessible. A restricted account is required, but only Admin credentials are available.
 - **Test Data:** Restricted account and target page or function.
@@ -400,9 +402,8 @@
 
 ## 6. Directory
 
-### TC-027: Open the Directory Page
-
-- **Related Scenario:** TS-027
+### TC-026: Open the Directory Page
+- **Related Scenario:** TS-026
 - **Objective:** Verify that the Directory page loads and displays employee entries.
 - **Preconditions:** The user is logged in with access to Directory.
 - **Test Data:** Available directory entries.
@@ -413,28 +414,25 @@
 - **Expected Result:** The page loads without obvious errors and displays employee entries or an appropriate empty state.
 - **Actual Result:** The Directory page loaded successfully. The search filters for Employee Name, Job Title, and Location were visible. One employee record, Peter Mac Anderson, was displayed with the job title Chief Financial Officer and location information.
 - **Status:** PASS
-- **Evidence:** `Test_Evidence/TS-006_Directory/TC-027_Directory_Page.png`
+- **Evidence:** `Test_Evidence/TS-006_Directory/TC-026_Directory_Page.png`
 
-### TC-028: Search the Directory by Employee Name
-
-- **Related Scenario:** TS-028
+### TC-027: Search the Directory by Employee Name
+- **Related Scenario:** TS-027
 - **Objective:** Verify that searching for an existing employee returns the matching directory entry.
 - **Preconditions:** The user is logged in, and the Directory page is accessible.
 - **Test Data:** Employee Name: `Peter Mac Anderson`
-
 - **Steps:**
   1. Open the Directory page.
   2. Enter `Peter Mac Anderson` in the Employee Name field.
   3. Click Search.
   4. Review the returned results.
-
 - **Expected Result:** The search returns the matching employee entry.
 - **Actual Result:** The search returned one matching record for Peter Mac Anderson. The record displayed his job title as Chief Financial Officer and location information.
 - **Status:** PASS
-- **Evidence:** `Test_Evidence/TS-006_Directory/TC-027_Search_Directory_Page.png` (Need to work on it later)
+- **Evidence:** `Test_Evidence/TS-006_Directory/TC-027_Search_Directory_Page.png` 
 
-### TC-029: Filter Directory by Job Title or Location
-- **Related Scenario:** TS-029
+### TC-028: Filter Directory by Job Title or Location
+- **Related Scenario:** TS-028
 - **Objective:** Verify that available job-title and location filters narrow directory results.
 - **Preconditions:** The user is logged in, and the Directory page is accessible.
 - **Test Data:**
@@ -450,14 +448,12 @@
 - **Expected Result:** Returned employees match the selected job title or location.
 - **Actual Result:** Filtering by Chief Financial Officer returned one employee, Peter Mac Anderson. Filtering by Texas R&D returned four employees, all displaying Texas R&D as their location.
 - **Status:** PASS
-- **Evidence:**
-  - `Test_Evidence/TS-006_Directory/TC-029_Directory_JobTitle_Filter.png`
-  - `Test_Evidence/TS-006_Directory/TC-029_Directory_Location_Filter.png`
+- **Evidence:** `Test_Evidence/TS-006_Directory/TC-028_Directory_JobTitle_Filter.png` `Test_Evidence/TS-006_Directory/TC-028_Directory_Location_Filter.png`
 
 ## 7. Dashboard
 
-### TC-030: Open the Dashboard and Review Visible Widgets
-- **Related Scenario:** TS-030
+### TC-029: Open the Dashboard and Review Visible Widgets
+- **Related Scenario:** TS-029
 - **Objective:** Verify that the Dashboard loads and displays its main widgets.
 - **Preconditions:** The user is logged in to OrangeHRM.
 - **Test Data:** Admin account.
@@ -468,10 +464,10 @@
 - **Expected Result:** The Dashboard loads without obvious errors and displays its available widgets.
 - **Actual Result:** The Dashboard loaded successfully. Visible widgets included Time at Work, My Actions, Quick Launch, Buzz Latest Posts, Employees on Leave Today, and Employee Distribution by Sub Unit.
 - **Status:** PASS
-- **Evidence:** `Test_Evidence/TS-007_Dashboard/TC-030_Dashboard_Widgets.png`
+- **Evidence:** `Test_Evidence/TS-007_Dashboard/TC-029_Dashboard_Widgets.png`
 
-### TC-031: Review Quick Launch Shortcuts
-- **Related Scenario:** TS-031
+### TC-030: Review Quick Launch Shortcuts
+- **Related Scenario:** TS-030
 - **Objective:** Verify that the Timesheets shortcut on the Dashboard opens the correct page.
 - **Preconditions:** The user is logged in and the Dashboard is accessible.
 - **Test Data:** Timesheets shortcut.
@@ -483,12 +479,12 @@
 - **Expected Result:** Clicking Timesheets opens the correct page without obvious errors.
 - **Actual Result:** The Timesheets page opened successfully. The page displayed an employee selection field and a Timesheets Pending Action section containing three records.
 - **Status:** PASS
-- **Evidence:** `Test_Evidence/[your existing Dashboard folder]/TC-031_QuickLaunch_Timesheets.png`
+- **Evidence:** `Test_Evidence/TS-007_Dashboard/TC-030_QuickLaunch_Timesheets.png`
 
 ## 8. Leave
 
-### TC-032: Review Available Leave Pages
-- **Related Scenario:** TS-032
+### TC-031: Review Available Leave Pages
+- **Related Scenario:** TS-031
 - **Objective:** Verify that the Leave module opens and displays its available pages and controls.
 - **Preconditions:** The user is logged in to OrangeHRM.
 - **Test Data:** Admin account.
@@ -499,26 +495,10 @@
 - **Expected Result:** The Leave module opens successfully and displays its available navigation options and page controls.
 - **Actual Result:** The Leave module opened successfully. The page displayed Apply, My Leave, Entitlements, Reports, Configure, Leave List, and Assign Leave. The Assign Leave form was visible.
 - **Status:** PASS
-- **Evidence:** `Test_Evidence/TS-007_Leave/TC-032_Leave_Module.png`
+- **Evidence:** `Test_Evidence/TS-008_Leave/TC-031_Leave_Module.png`
 
-### TC-033: Review the Leave Application Form and Validation
-- **Related Scenario:** TS-033
-- **Objective:** Identify the available fields and verify required-field behavior without submitting an unintended request.
-- **Preconditions:** The Apply Leave form is accessible.
-- **Test Data:** Leave Application form; no request should be submitted.
-- **Steps:**
-  1. Open the Apply Leave page.
-  2. Review the available fields and required indicators.
-  3. If safe, leave a confirmed required field empty and trigger validation without submitting a request.
-  4. Record the observed validation behavior.
-  5. Exit without submitting the leave application.
-- **Expected Result:** The available fields and validation behavior are documented, and no unintended leave request is submitted.
-- **Actual Result:** Not executed yet.
-- **Status:** Not Executed
-- **Evidence:** `Test_Evidence/TS-007_Leave/`
-
-### TC-034: Review Leave Records and Entitlements
-- **Related Scenario:** TS-034
+### TC-032: Review Leave Records and Entitlements
+- **Related Scenario:** TS-032
 - **Objective:** Verify that accessible leave records and entitlement information are displayed.
 - **Preconditions:** The user is logged in to OrangeHRM and has access to the Leave module.
 - **Test Data:** Admin account; leave period: January 1–December 31, 2026.
@@ -532,12 +512,10 @@
 - **Actual Result:** Both pages opened successfully. My Entitlements displayed “No Records Found” and a total of 0.00 days. Employee Entitlements also displayed “No Records Found” and a total of 0.00 days for the selected employee and leave type.
 - **Status:** PASS
 - **Notes:** No entitlement records were available in the demo environment. This result does not confirm a defect.
-- **Evidence:**
-  - `Test_Evidence/TS-007_Leave/TC-034_My_Entitlements.png`
-  - `Test_Evidence/TS-007_Leave/TC-034_Employee_Entitlements.png`
+- **Evidence:** `Test_Evidence/TS-008_Leave/TC-032_My_Entitlements.png` `Test_Evidence/TS-008_Leave/TC-032_Employee_Entitlements.png`
 
-### TC-035: Review Leave Reports and Filters
-- **Related Scenario:** TS-035
+### TC-033: Review Leave Reports and Filters
+- **Related Scenario:** TS-033
 - **Objective:** Verify that the Leave Reports page displays available reports and supports the available report filters.
 - **Preconditions:** The user is logged in to OrangeHRM and has access to the Leave module.
 - **Test Data:** Leave period: January 1–December 31, 2026.
@@ -552,12 +530,12 @@
 - **Actual Result:** The My Leave Entitlements and Usage Report displayed successfully. The selected leave period was January 1–December 31, 2026. The report showed 11 records, and all visible leave entitlement, pending approval, scheduled, taken, and balance values were 0.00 days.
 - **Status:** PASS
 - **Notes:** The report displayed zero-day values. This alone does not indicate a defect.
-- **Evidence:** `Test_Evidence/TS-007_Leave/TC-035_Leave_Entitlements_Report.png`
+- **Evidence:** `Test_Evidence/TS-008_Leave/TC-033_Leave_Entitlements_Report.png`
 
 ## 9. Time
 
-### TC-036: Review the Timesheets Page
-- **Related Scenario:** TS-036
+### TC-034: Review the Timesheets Page
+- **Related Scenario:** TS-034
 - **Objective:** Verify that the Timesheets page opens and displays available timesheet records and controls.
 - **Preconditions:** The user is logged in to OrangeHRM and has access to the Time module.
 - **Test Data:** Existing timesheet records displayed in the demo environment.
@@ -571,11 +549,10 @@
 - **Actual Result:** The Timesheets page loaded successfully. The employee selection field and View button were displayed. The Timesheets Pending Action section showed 3 records for Rajat Gupta, with periods displayed as 2023-16-01 to 2023-22-01, 2022-15-08 to 2022-21-08, and 2020-14-09 to 2020-20-09.
 - **Status:** PASS
 - **Notes:** The displayed dates appear unusual because the day values exceed the number of days in those months. This may be a demo-data or display issue and should be verified before reporting it as a defect.
-- **Evidence:** `Test_Evidence/TS-008_Time/TC-036_Timesheets_Page.png`
+- **Evidence:** `Test_Evidence/TS-009_Time/TC-034_Timesheets_Page.png`
 
-### TC-037: Review the Attendance Page
-
-- **Related Scenario:** TS-037
+### TC-035: Review the Attendance Page
+- **Related Scenario:** TS-035
 - **Objective:** Verify that the Attendance page displays attendance records and related information correctly.
 - **Preconditions:** The user is logged in to OrangeHRM and has access to the Time module.
 - **Test Data:** October 23, 2026.
@@ -588,10 +565,10 @@
 - **Expected Result:** The page displays attendance records for the selected date, with the corresponding punch-in and punch-out times and duration.
 - **Actual Result:** The page displayed one attendance record for October 23, 2026. The punch-in time was 9:40 PM, the punch-out time was 10:13 PM, and the recorded duration was 0.55 hours. The page showed a total duration of 0.55 hours.
 - **Status:** PASS
-- **Evidence:** `Test_Evidence/TS-008_Time/TC-037_Attendance_My_Records.png`
+- **Evidence:** `Test_Evidence/TS-009_Time/TC-035_Attendance_My_Records.png`
 
-### TC-038: Search or Filter Available Time Records
-- **Related Scenario:** TS-038
+### TC-036: Search or Filter Available Time Records
+- **Related Scenario:** TS-036
 - **Objective:** Verify that the My Timesheets page displays the appropriate results for different timesheet periods.
 - **Preconditions:** The user is logged in to OrangeHRM and has access to the Time module.
 - **Test Data:** Two adjacent timesheet periods displayed by the application.
@@ -604,12 +581,10 @@
 - **Actual Result:** The initial period displayed “No Records Found.” After moving to the previous period, the page displayed “No Timesheets Found.” No timesheet records were available for either period.
 - **Status:** PASS
 - **Notes:** The application displayed an appropriate empty-state message for both periods. No timesheets were created or modified.
-- **Evidence:**
-  - `Test_Evidence/TS-008_Time/TC-038_My_Timesheets.png`
-  - `Test_Evidence/TS-008_Time/TC-038_My_Timesheets_Previous_Period.png`
+- **Evidence:** `Test_Evidence/TS-009_Time/TC-036_My_Timesheets.png` `Test_Evidence/TS-009_Time/TC-036_My_Timesheets_Previous_Period.png`
 
-### TC-039: Review Time Reports and Project Info
-- **Related Scenario:** TS-039
+### TC-037: Review Time Reports
+- **Related Scenario:** TS-037
 - **Objective:** Verify that time reports display project activity information and respond to the approved-timesheets filter.
 - **Preconditions:** The user is logged in to OrangeHRM and has access to the Time module.
 - **Test Data:** Project: ACME Ltd - ACME Ltd; project date range displayed on the page.
@@ -623,14 +598,12 @@
 - **Actual Result:** With the approval filter disabled, the report displayed one activity, “Handling insurance-related issues,” with 0.00 hours. After enabling the filter and clicking View, the report displayed “No Records Found,” with a total duration of 0.00 hours.
 - **Status:** PASS
 - **Notes:** The displayed results changed when the approved-timesheets filter was enabled. No records were modified.
-- **Evidence:**
-  - `Test_Evidence/TS-008_Time/TC-039_Project_Report.png`
-  - `Test_Evidence/TS-008_Time/TC-039_Project_Report_Approved_Only.png`
+- **Evidence:** `Test_Evidence/TS-009_Time/TC-037_Project_Report.png` `Test_Evidence/TS-009_Time/TC-037_Project_Report_Approved_Only.png`
 
 ## 10. Recruitment
 
-### TC-040: Open the Candidates Page
-- **Related Scenario:** TS-040
+### TC-038: Open the Candidates Page
+- **Related Scenario:** TS-038
 - **Objective:** Verify that the Candidates page opens and displays its available controls and candidate records.
 - **Preconditions:** The user is logged in to OrangeHRM.
 - **Test Data:** Admin account.
@@ -642,10 +615,10 @@
 - **Expected Result:** The Candidates page opens successfully and displays search controls, filters, candidate records, and available actions.
 - **Actual Result:** The Candidates page opened successfully and displayed search filters for job title, vacancy, hiring manager, status, candidate name, keywords, application date, and application method. The page displayed 79 records and view and delete action icons.
 - **Status:** PASS
-- **Evidence:** `Test_Evidence/TS-009_Recruitment/TC-040_Candidates_Page.png`
+- **Evidence:** `Test_Evidence/TS-010_Recruitment/TC-038_Candidates_Page.png`
 
-### TC-041: Search or Filter Candidates
-- **Related Scenario:** TS-041
+### TC-039: Search or Filter Candidates
+- **Related Scenario:** TS-039
 - **Objective:** Verify that candidates can be searched by name.
 - **Preconditions:** The user is logged in to OrangeHRM and the Candidates page is accessible.
 - **Test Data:** Candidate Name: John Doe.
@@ -657,10 +630,10 @@
 - **Expected Result:** The system displays candidates matching the entered name.
 - **Actual Result:** The search returned one record for John Doe, applying for Senior QA Lead. The candidate's status was Shortlisted.
 - **Status:** PASS
-- **Evidence:** `Test_Evidence/TS-009_Recruitment/TC-041_Search_Candidates.png`
+- **Evidence:** `Test_Evidence/TS-010_Recruitment/TC-039_Search_Candidates.png`
 
-### TC-042: Open the Vacancies Page
-- **Related Scenario:** TS-042
+### TC-040: Open the Vacancies Page
+- **Related Scenario:** TS-040
 - **Objective:** Verify that the Vacancies page opens and displays available vacancies and search controls.
 - **Preconditions:** The user is logged in to OrangeHRM.
 - **Test Data:** Admin account.
@@ -672,10 +645,10 @@
 - **Expected Result:** The Vacancies page opens successfully and displays available vacancies, search filters, and action controls.
 - **Actual Result:** The Vacancies page opened successfully and displayed 7 records. The list included vacancy names, job titles, hiring managers, statuses, and edit and delete action icons.
 - **Status:** PASS
-- **Evidence:** `Test_Evidence/TS-009_Recruitment/TC-042_Vacancies_Page.png`
+- **Evidence:** `Test_Evidence/TS-010_Recruitment/TC-040_Vacancies_Page.png`
 
-### TC-043: Review Candidate Details
-- **Related Scenario:** TS-043
+### TC-041: Review Candidate Details
+- **Related Scenario:** TS-041
 - **Objective:** Verify that candidate details are displayed correctly.
 - **Preconditions:** The user is logged in to OrangeHRM and can access Recruitment.
 - **Test Data:** Candidate: John Doe
@@ -687,12 +660,12 @@
 - **Expected Result:** The candidate profile opens and displays the available candidate information.
 - **Actual Result:** John Doe's profile opened successfully. It displayed the name John Doe, vacancy Senior QA Lead, status Shortlisted, email john.doe@example.com, an empty contact number field, and the resume pdf-sample.pdf.
 - **Status:** PASS
-- **Evidence:** `Test_Evidence/TS-009_Recruitment/TC-043_Candidate_Details.png`
+- **Evidence:** `Test_Evidence/TS-010_Recruitment/TC-041_Candidate_Details.png`
 
 ## 11. My Info
 
-### TC-044: Review Personal and Contact Details
-- **Related Scenario:** TS-044
+### TC-042: Review Personal and Contact Details
+- **Related Scenario:** TS-042
 - **Objective:** Verify that personal and contact details are displayed.
 - **Preconditions:** The user is logged in to OrangeHRM.
 - **Test Data:** Logged-in employee profile.
@@ -704,10 +677,10 @@
 - **Expected Result:** The Personal Details and Contact Details pages open successfully and display the available information.
 - **Actual Result:** Personal Details displayed employee information, including name, employee ID, nationality, and marital status. Contact Details displayed address, telephone, and email fields.
 - **Status:** PASS
-- **Evidence:** `TC-044_Personal_Contact_Details.png`
+- **Evidence:** `Test_Evidence/TS-011_Info/TC-042_Personal_Contact_Details.png` 
 
-### TC-045: Review Emergency Contacts, Dependents, and Qualifications
-- **Related Scenario:** TS-045
+### TC-043: Review Emergency Contacts, Dependents, and Qualifications
+- **Related Scenario:** TS-043
 - **Objective:** Verify that emergency contacts, dependents, and qualification information are displayed.
 - **Preconditions:** The user is logged in to OrangeHRM.
 - **Test Data:** Logged-in employee profile.
@@ -719,13 +692,10 @@
 - **Expected Result:** All three sections open successfully and display available information or an appropriate message when no records exist.
 - **Actual Result:** Emergency Contacts and Dependents displayed “No Records Found.” Qualifications displayed one work experience record and one education record.
 - **Status:** PASS
-- **Evidence:**
-  - `TC-045_Emergency_Contacts.png`
-  - `TC-045_Dependents.png`
-  - `TC-045_Qualifications.png`
+- **Evidence:** `Test_Evidence/TS-011_Info/TC-043_Emergency_Contacts.png` `Test_Evidence/TS-011_Info/TC-043_Dependents.png` `Test_Evidence/TS-011_Info/TC-043_Qualifications.png`
 
-### TC-046: Review Job and Salary Information
-- **Related Scenario:** TS-046
+### TC-044: Review Job and Salary Information
+- **Related Scenario:** TS-044
 - **Objective:** Verify that job and salary information is displayed in the employee profile.
 - **Preconditions:** The user is logged in to OrangeHRM.
 - **Test Data:** Logged-in employee profile.
@@ -738,14 +708,12 @@
 - **Expected Result:** The Job and Salary sections open successfully and display available information or an appropriate message when no records exist.
 - **Actual Result:** The Job section displayed the joining date, job title, job category, sub-unit, location, and employment status. The Salary section displayed “No Records Found” for salary components and attachments.
 - **Status:** PASS
-- **Evidence:**
-  - `TC-046_Job_Information.png`
-  - `TC-046_Salary_Information.png`
+- **Evidence:** `Test_Evidence/TS-011_Info/TC-044_Job_Information.png` `Test_Evidence/TS-011_Info/TC-044_Salary_Information.png`
 
 ## 12. Performance
 
-### TC-047: Review Manage Reviews and Available Filters
-- **Related Scenario:** TS-047
+### TC-045: Review Manage Reviews and Available Filters
+- **Related Scenario:** TS-045
 - **Objective:** Verify that the Manage Reviews page opens and displays available review filters and results.
 - **Preconditions:** The user is logged in to OrangeHRM.
 - **Test Data:** Default filter values.
@@ -757,11 +725,10 @@
 - **Expected Result:** The Manage Reviews page opens and displays available filters and review records, or an appropriate message when no records are available.
 - **Actual Result:** The page opened successfully and displayed filters for Employee Name, Job Title, Sub Unit, Include, Review Status, From Date, and To Date. The results section displayed “No Records Found.”
 - **Status:** PASS
-- **Evidence:**
-  - `TC-047_Manage_Reviews.png`
+- **Evidence:** `Test_Evidence/TS-012_Performance/TC-045_Manage_Reviews.png`
 
-### TC-048: Review My Trackers and Employee Trackers
-- **Related Scenario:** TS-048
+### TC-046: Review My Trackers and Employee Trackers
+- **Related Scenario:** TS-046
 - **Objective:** Verify that the My Trackers and Employee Trackers pages display available performance tracker information.
 - **Preconditions:** The user is logged in to OrangeHRM.
 - **Test Data:** Admin account and available tracker records.
@@ -774,12 +741,10 @@
 - **Expected Result:** Both pages open successfully and display available tracker information and controls.
 - **Actual Result:** My Trackers displayed one record, “Tracker for paul,” with an added date of 2022-04-08. Employee Trackers displayed one record for manda Gupta associated with “Tracker for paul,” with an added date of 2022-04-08. The employee search field and Include filter were also available.
 - **Status:** PASS
-- **Evidence:**
-  - `TC-048_My_Trackers.png`
-  - `TC-048_Employee_Trackers.png`
+- **Evidence:** `Test_Evidence/TS-012_Performance/TC-046_My_Trackers.png` `Test_Evidence/TS-012_Performance/TC-046_Employee_Trackers.png`
 
-### TC-049: Review Performance Configuration Options
-- **Related Scenario:** TS-049
+### TC-047: Review Performance Configuration Options
+- **Related Scenario:** TS-047
 - **Objective:** Verify that Performance configuration pages display available settings and records.
 - **Preconditions:** The user is logged in to OrangeHRM.
 - **Test Data:** Admin account and existing configuration records.
@@ -793,14 +758,12 @@
 - **Expected Result:** The configuration pages open successfully and display available settings, records, and controls.
 - **Actual Result:** The KPI page displayed 51 records and a Job Title filter. The Performance Trackers page displayed one record for manda Gupta associated with “Tracker for paul,” along with an employee search field and available actions.
 - **Status:** PASS
-- **Evidence:**
-  - `TC-049_Performance_Configuration.png`
-  - `TC-049_Performance_Trackers.png`
+- **Evidence:** `Test_Evidence/TS-012_Performance/TC-047_Performance_Configuration.png` `Test_Evidence/TS-012_Performance/TC-047_Performance_Trackers.png`
 
 ## 13. Maintenance
 
-### TC-050: Verify Authorization for Maintenance
-- **Related Scenario:** TS-050
+### TC-048: Review Maintenance Access and Controls
+- **Related Scenario:** TS-048
 - **Objective:** Verify access to Maintenance features and identify available authorization controls.
 - **Preconditions:** The user is logged in to OrangeHRM.
 - **Test Data:** None.
@@ -812,28 +775,28 @@
 - **Expected Result:** The Maintenance page and its available controls are displayed according to the user's permissions.
 - **Actual Result:** The Purge Records page opened successfully and displayed a required Past Employee field and a Search button. No records were searched for or deleted.
 - **Status:** PASS
-- **Evidence:** `TC-050_Maintenance_Access.png`
+- **Evidence:** `Test_Evidence/TS-013_Maintenance/TC-048_Maintenance_Access.png`
 
 ## 14. Claim
 
-### TC-051: Review the Submit Claim Form and Validation
-- **Related Scenario:** TS-051
-- **Objective:** Identify available claim fields and required-field validation without submitting a claim.
-- **Preconditions:** The user has access to the Claim module and Submit Claim page.
-- **Test Data:** Submit Claim form.
+### TC-049: Review the Submit Claim Form
+- **Related Scenario:** TS-049
+- **Objective:** Verify that the Submit Claim form displays the required fields and available controls.
+- **Preconditions:** The user is logged in to OrangeHRM.
+- **Test Data:** None.
 - **Steps:**
-  1. Open Claim.
+  1. Open the Claim module.
   2. Open Submit Claim.
-  3. Review the available fields and required indicators.
-  4. If safe, trigger required-field validation without submitting a claim.
-  5. Exit without submitting the form.
-- **Expected Result:** Available fields and validation behavior are documented, and no claim is submitted.
-- **Actual Result:** Not executed yet.
-- **Status:** Not Executed
-- **Evidence:** `Test_Evidence/TS-013_Claim/`
+  3. Review the Event and Currency fields.
+  4. Review the Remarks field and the Cancel and Create buttons.
+  5. Do not create or submit a claim.
+- **Expected Result:** The claim form opens successfully and displays the required fields and available controls.
+- **Actual Result:** The form displayed required Event and Currency fields, a Remarks field, and Cancel and Create buttons.
+- **Status:** PASS
+- **Evidence:** `Test_Evidence/TS-014_Claim/TC-049_Submit_Claim_Form.png`
 
-### TC-052: Review My Claims and Employee Claims
-- **Related Scenario:** TS-052
+### TC-050: Review My Claims and Employee Claims
+- **Related Scenario:** TS-050
 - **Objective:** Verify that My Claims and Employee Claims pages display claim records and available filters.
 - **Preconditions:** The user is logged in to OrangeHRM.
 - **Test Data:** Existing sample claim records.
@@ -845,12 +808,10 @@
 - **Expected Result:** Both pages open successfully and display available claim records and filtering controls.
 - **Actual Result:** My Claims displayed 5 records. Employee Claims displayed 6 records. Both pages showed filtering controls and View Details buttons.
 - **Status:** PASS
-- **Evidence:**
-  - `TC-052_My_Claims.png`
-  - `TC-052_Employee_Claims.png`
+- **Evidence:** `Test_Evidence/TS-014_Claim/TC-050_My_Claims.png` `Test_Evidence/TS-014_Claim/TC-050_Employee_Claims.png`
 
-### TC-053: Review Assign Claim and Claim Configuration
-- **Related Scenario:** TS-053
+### TC-051: Review Assign Claim and Claim Configuration
+- **Related Scenario:** TS-051
 - **Objective:** Verify that the Assign Claim and Claim Configuration pages display their available fields, options, and controls.
 - **Preconditions:** The user is logged in to OrangeHRM.
 - **Test Data:** Existing claim events and configuration options.
@@ -862,14 +823,12 @@
 - **Expected Result:** Both pages open successfully and display their available fields, options, and controls.
 - **Actual Result:** The Assign Claim page displayed the Employee Name, Event, Currency, and Remarks fields. The Configuration page displayed three events: Accommodation, Medical Reimbursement, and Travel Allowance. All three events showed Active status.
 - **Status:** PASS
-- **Evidence:**
-  - `TC-053_Assign_Claim.png`
-  - `TC-053_Claim_Configuration.png`
+- **Evidence:** `Test_Evidence/TS-014_Claim/TC-051_Assign_Claim.png` `Test_Evidence/TS-014_Claim/TC-051_Claim_Configuration.png`
 
 ## 15. Buzz
 
-### TC-054: Open the Buzz Feed and Review Sorting Options
-- **Related Scenario:** TS-054
+### TC-052: Open the Buzz Feed and Review Sorting Options
+- **Related Scenario:** TS-052
 - **Objective:** Verify that the Buzz Newsfeed opens and its post-sorting options work.
 - **Preconditions:** The user is logged in to OrangeHRM.
 - **Test Data:** Existing sample Buzz posts.
@@ -882,13 +841,10 @@
 - **Expected Result:** The Buzz Newsfeed opens, and each sorting option displays posts according to the selected option.
 - **Actual Result:** The Buzz Newsfeed opened successfully. All three sorting options were available and selectable. The displayed posts changed when switching between sorting options.
 - **Status:** PASS
-- **Evidence:**
-  - `TC-054_Most_Recent_Posts.png`
-  - `TC-054_Most_Liked_Posts.png`
-  - `TC-054_Most_Commented_Posts.png`
+- **Evidence:** `Test_Evidence/TS-015_Buzz/TC-052_Most_Recent_Posts.png` `Test_Evidence/TS-015_Buzz/TC-052_Most_Liked_Posts.png` `Test_Evidence/TS-015_Buzz/TC-052_Most_Commented_Posts.png`
 
-### TC-055: Review Post Creation and Media Attachment
-- **Related Scenario:** TS-055
+### TC-053: Review Post Creation and Media Attachment
+- **Related Scenario:** TS-053
 - **Objective:** Verify that the Buzz module provides options for creating posts and attaching photos or videos.
 - **Preconditions:** The user is logged in to OrangeHRM.
 - **Test Data:** No test data required.
@@ -903,6 +859,4 @@
 - **Expected Result:** The photo-sharing form provides a text field, photo attachment area, and Share button. The video-sharing form provides a text field, video URL field, and Share button.
 - **Actual Result:** The Share Photos form opened and displayed a text field, an Add Photos area, and a Share button. The Share Video form opened and displayed a text field, a Video URL field, and a Share button.
 - **Status:** PASS
-- **Evidence:**
-  - `TC-055_Share_Photos.png`
-  - `TC-055_Share_Video.png`
+- **Evidence:** `Test_Evidence/TS-015_Buzz/TC-053_Share_Photos.png` `Test_Evidence/TS-015_Buzz/TC-053_Share_Video.png`
