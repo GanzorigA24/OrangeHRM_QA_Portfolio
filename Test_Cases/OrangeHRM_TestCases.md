@@ -1,5 +1,4 @@
 # OrangeHRM Detailed Test Cases
-
 **Application:** OrangeHRM Open Source Demo  
 **URL:** https://opensource-demo.orangehrmlive.com/  
 **Environment:** Windows, Google Chrome  
