@@ -28,5 +28,8 @@ test('Search for an existing username', async ({ page }) => {
   await page.getByRole('textbox').nth(1).fill('Admin');
   await page.getByRole('button', { name: 'Search' }).click();
 
-  await expect(page.getByRole('table')).toContainText('Admin');
+  const resultsTable = page.getByRole('table');
+
+  await expect(resultsTable).toContainText('Admin');
+  await expect(resultsTable.getByRole('row').nth(1)).toBeVisible();
 });
