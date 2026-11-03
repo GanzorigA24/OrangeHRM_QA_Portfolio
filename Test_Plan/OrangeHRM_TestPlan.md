@@ -40,8 +40,8 @@ The following testing types are included in the project:
 
 - **Functional Testing:** Verify that application features behave as expected.
 - **Exploratory Testing:** Explore the application to identify unexpected issues beyond the documented test cases.
-- **Regression Testing:** Re-test previously working features after changes or bug fixes.
-- **Automated Testing:** Automate selected regression test cases using Playwright and TypeScript in a future project phase.
+- **Regression Testing:** Re-test previously working features to check that changes do not introduce new issues.
+- **Automated Testing:** Automate selected regression test cases using Playwright and TypeScript.
 
 ## 4. Test Environment
 
@@ -50,11 +50,12 @@ The following testing types are included in the project:
 - **Version:** Public hosted demo; exact version not verified
 - **Environment:** Hosted web application
 - **Operating System:** Windows
-- **Browser:** Google Chrome
-- **Testing Approach:** Manual functional testing
-- **Automation Tools:** Playwright and TypeScript (planned)
+- **Manual Testing Browser:** Google Chrome
+- **Automation Browsers:** Chromium, Firefox, and WebKit
+- **Testing Approach:** Manual functional testing and automated regression testing
+- **Automation Tools:** Playwright and TypeScript
 - **Test Management:** GitHub
-- **Evidence:** Screenshots and documented test results
+- **Evidence:** Screenshots, documented test results, and Playwright HTML reports
 
 ## 5. Test Data
 
@@ -139,11 +140,12 @@ These documents will be reviewed together to ensure that scenario IDs, test case
 
 ## 11. Future Work
 
-The next project phase will focus on:
+The following improvements may be considered for future development:
 
-- Reviewing and finalizing manual test documentation
-- Performing additional exploratory testing
-- Reporting verified defects, if found
-- Learning Playwright and TypeScript
-- Automating selected regression test cases
-- Exploring automated test reporting and GitHub Actions
+- Expand automated test coverage to additional application modules.
+- Improve test data management and test isolation.
+- Perform additional exploratory testing.
+- Document verified defects when identified.
+- Explore automated test execution through GitHub Actions.
+- Improve test reporting and maintainability.
+- Continue practicing API testing and other QA automation techniques.
