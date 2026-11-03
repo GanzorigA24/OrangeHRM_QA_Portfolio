@@ -1,10 +1,11 @@
 # OrangeHRM Detailed Test Cases
 
-**Application:** OrangeHRM Open Source Demo  
-**URL:** https://opensource-demo.orangehrmlive.com/  
-**Environment:** Windows, Google Chrome  
-**Testing Type:** Manual Functional Testing  
-**Test Status:** Manual execution completed; individual test results are documented in the test cases below.
+**Application:** OrangeHRM Open Source Demo
+**URL:** https://opensource-demo.orangehrmlive.com/
+**Environment:** Windows, Google Chrome
+**Testing Types:** Manual Functional Testing and Automated Regression Testing
+**Test Status:** Manual test execution completed; individual results and execution limitations are documented below.
+**Automation:** Selected regression test cases automated using Playwright and TypeScript.
 
 ## 1. Login and Authentication
 
