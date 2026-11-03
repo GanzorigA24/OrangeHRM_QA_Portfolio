@@ -3,8 +3,8 @@
 **Application:** OrangeHRM Open Source Demo  
 **URL:** https://opensource-demo.orangehrmlive.com/  
 **Environment:** Google Chrome on Windows  
-**Testing Approach:** Manual functional testing  
-**Document Scope:** High-level scenarios for the hosted demo application
+**Testing Approach:** Manual functional testing and automated regression testing  
+**Document Scope:** High-level test scenarios for the hosted demo application
 
 ## 1. Login and Authentication
 
@@ -86,7 +86,7 @@
 | TS-034 | Review the Timesheets page | Verify that the Timesheets page loads and displays available options or records. |
 | TS-035 | Review the Attendance page | Verify that the Attendance page loads and displays available records or actions. |
 | TS-036 | Search or filter available time records | Verify that available search criteria narrow time records correctly. |
-| TS-037 | Review Time reports | Verify that the Project Reports page displays available activity information and responds to the approved-timesheets filter. |
+| TS-037 | Review Time reports | Verify that available Time reports can be accessed and that their search and filtering options work as expected. |
 
 ## 10. Recruitment
 
@@ -117,7 +117,7 @@
 
 | Scenario ID | Test Scenario | Purpose |
 |---|---|---|
-| TS-048 | Review Maintenance Access and Controls | Verify that access to Maintenance is restricted to authorized users and that the application presents the expected access prompt or restriction. |
+| TS-048 | Verify that Maintenance access is restricted to authorized users. | Verify that access to Maintenance is restricted to authorized users and that the application presents the expected access prompt or restriction. |
 
 ## 14. Claim
 
