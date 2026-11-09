@@ -4,7 +4,7 @@
 
 This project demonstrates my practical skills in Software Quality Assurance (QA) through manual and automated testing of the OrangeHRM Open Source Demo web application.
 
-The project includes test planning, test scenario design, detailed test case creation, manual test execution, evidence collection, and automated regression testing using Playwright and TypeScript.
+The project includes test planning, test scenario design, detailed test case creation, manual test execution, evidence collection, and automated testing using Playwright and TypeScript.
 
 **Application:** OrangeHRM Open Source Demo  
 **Website:** https://opensource-demo.orangehrmlive.com/  
