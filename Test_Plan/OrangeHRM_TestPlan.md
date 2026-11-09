@@ -40,7 +40,6 @@ The following testing types are included in the project:
 
 - **Functional Testing:** Verify that application features behave as expected.
 - **Exploratory Testing:** Explore the application to identify unexpected issues beyond the documented test cases.
-- **Regression Testing:** Re-test previously working features to check that changes do not introduce new issues.
 - **Automated Testing:** Automate selected regression test cases using Playwright and TypeScript.
 
 ## 4. Test Environment
