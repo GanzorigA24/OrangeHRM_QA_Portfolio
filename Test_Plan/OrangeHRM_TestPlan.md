@@ -128,6 +128,7 @@ Evidence files are organized in the `Test_Evidence/` directory. Filenames should
 
 The project documentation is organized as follows:
 
+- **Automation:** `Automation/tests`
 - **Test Plan:** `Test_Plan/OrangeHRM_TestPlan.md`
 - **Test Scenarios:** `Test_Scenarios/OrangeHRM_TestScenarios.md`
 - **Test Cases:** `Test_Cases/OrangeHRM_TestCases.md`
